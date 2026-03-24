@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+
+.claude/
+.env
+.venv/
+venv/
+
+log/
+logs/
+results/
+reports/
+store_data/
+data/
+
+*.db
+*.log

@@ -1,0 +1,7 @@
+services:
+  werewolves-tests:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    working_dir: /app
+    command: ["pytest", "-q"]

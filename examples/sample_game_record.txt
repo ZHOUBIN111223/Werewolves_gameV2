@@ -1,0 +1,100 @@
+狼人杀对局记录
+========================================
+游戏 ID：game_1_105026
+数据源：C:\Users\周彬\Desktop\agent\Werewolves_gameV2\store_data\global_events_test.db
+说明：本记录基于事件库自动导出，包含公开流程与复盘可见的夜间动作。
+
+对局摘要
+----------------------------------------
+玩家数量：6
+获胜方：狼人阵营
+最终存活：player_2、player_3
+
+身份表（复盘视角）
+----------------------------------------
+player_0：村民，结果：失败
+player_1：猎人，结果：失败
+player_2：女巫，结果：失败
+player_3：狼人，结果：胜利
+player_4：预言家，结果：失败
+player_5：狼人，结果：胜利
+
+过程记录
+----------------------------------------
+[准备阶段]
+- 玩家列表：player_0、player_1、player_2、player_3、player_4、player_5
+
+[第1夜]
+- 夜间行动：狼人 player_3 尝试击杀 player_4
+- 夜间行动：女巫 player_2 使用解药救下 player_4
+- 夜间行动：预言家查验 player_3，结果是 狼人
+
+[第1天]
+- 警长竞选开始，候选人：player_4、player_5
+- player_4 发言：我先听听大家的想法。
+- player_5 发言：我先听听大家的想法。
+- 警长投票：player_0 -> player_4
+- 警长投票：player_1 -> player_5
+- 警长投票：player_2 -> player_5
+- 警长投票：player_3 -> player_4
+- 警长竞选平票：player_4、player_5（2票）
+- 白天公告：昨夜是平安夜
+- 发言顺序：player_0 -> player_1 -> player_2 -> player_3 -> player_4 -> player_5
+- player_0 发言：作为村民，我认为player_0行为可疑，需要将其投出
+- player_1 发言：作为村民，我认为player_2行为可疑，需要将其投出
+- player_2 发言：我先听听大家的想法。
+- player_3 发言：我先听听大家的想法。
+- player_4 发言：我先听听大家的想法。
+- player_5 发言：我先听听大家的想法。
+- 放逐投票：player_0 -> player_5
+- 放逐投票：player_1 -> player_0
+- 放逐投票：player_2 -> player_3
+- 放逐投票：player_3 -> player_2
+- 放逐投票：player_4 -> player_0
+- 放逐投票：player_5 -> player_2
+- 票型统计：player_0: 2票，player_1: 0票，player_2: 2票，player_3: 1票，player_4: 0票，player_5: 1票
+- 放逐结果：平票，无人出局（player_0、player_2）
+
+[第2夜]
+- 夜间行动：狼人 player_3 尝试击杀 player_4
+- 夜间行动：预言家查验 player_5，结果是 狼人
+- 玩家出局：player_4（原因：night death）
+
+[第2天]
+- 白天公告：昨夜死亡玩家为 player_4
+- 发言顺序：player_0 -> player_1 -> player_2 -> player_3 -> player_5
+- player_0 发言：作为村民，我认为player_2行为可疑，需要将其投出
+- player_1 发言：我先听听大家的想法。
+- player_2 发言：我先听听大家的想法。
+- player_3 发言：我先听听大家的想法。
+- player_5 发言：我先听听大家的想法。
+- 放逐投票：player_0 -> player_2
+- 放逐投票：player_1 -> player_3
+- 放逐投票：player_2 -> player_0
+- 放逐投票：player_3 -> player_2
+- 放逐投票：player_5 -> player_0
+- 票型统计：player_0: 2票，player_1: 0票，player_2: 2票，player_3: 1票，player_5: 0票
+- 放逐结果：平票，无人出局（player_0、player_2）
+
+[第3夜]
+- 夜间行动：狼人 player_3 尝试击杀 player_1
+- 夜间行动：女巫 player_2 毒杀了 player_5
+- 玩家出局：player_5（原因：night death）
+- 玩家出局：player_1（原因：night death）
+
+[第3天]
+- 白天公告：昨夜死亡玩家为 player_5、player_1
+- 发言顺序：player_0 -> player_2 -> player_3
+- player_0 发言：作为村民，我认为player_4行为可疑，需要将其投出
+- player_2 发言：我先听听大家的想法。
+- player_3 发言：我先听听大家的想法。
+- 放逐投票：player_0 -> player_2
+- 放逐投票：player_2 -> player_0
+- 放逐投票：player_3 -> player_0
+- 票型统计：player_0: 2票，player_2: 1票，player_3: 0票
+- 玩家出局：player_0（原因：eliminated by vote）
+- 遗言环节：player_0 发言（原因：vote_elimination）
+- player_0 发言：作为村民，我认为player_3行为可疑，需要将其投出
+
+[结算阶段]
+- 游戏结束：狼人阵营 获胜，最终存活玩家：player_2、player_3
