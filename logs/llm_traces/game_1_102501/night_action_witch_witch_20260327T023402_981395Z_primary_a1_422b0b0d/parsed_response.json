@@ -1,0 +1,6 @@
+{
+  "action_type": "poison",
+  "target": "player_5",
+  "reasoning_summary": "我是女巫player_2，首夜已用解药救了player_0。今晚我被狼刀，无法自救。场上确认身份的有：player_0（银水预言家）、player_3（验明猎人）。剩余未知身份的player_1和player_5中，player_5在警长投票时投给player_0但发言质疑验猎人收益，且后续跟票出player_4，行为有摇摆。我死后若带走一狼，好人优势更大；即使毒错，场上仍有预言家和猎人可以继续找狼。毒药不用就浪费了，选择毒最可疑的player_5。",
+  "public_speech": ""
+}

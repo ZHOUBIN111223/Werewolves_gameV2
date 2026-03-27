@@ -1,0 +1,15 @@
+[
+  {
+    "memory_type": "reflection",
+    "content": "当你是seer时，前期应低调观察，后期再发挥作用",
+    "game_id": "validation_game",
+    "phase": "post_game",
+    "role": "seer",
+    "confidence": 0.7834166041174631,
+    "tags": [
+      "strategy_rule",
+      "seer"
+    ],
+    "item_id": "d12e5033-14a3-41ab-9f32-bd34960dcc7c"
+  }
+]

@@ -1,0 +1,8 @@
+```json
+{
+  "action_type": "inspect",
+  "target": "player_0",
+  "reasoning_summary": "第一夜无信息可参考，选择查验player_0获取初始信息，为后续发言和推理奠定基础",
+  "public_speech": ""
+}
+```

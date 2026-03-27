@@ -1,0 +1,8 @@
+```json
+{
+  "action_type": "vote",
+  "target": "player_1",
+  "reasoning_summary": "player_1首夜验player_0缺乏合理解释，player_3女巫身份可信，平安夜与自救吻合。player_0的质疑有道理，player_1的查杀逻辑存在疑点。我倾向于投player_1。",
+  "public_speech": ""
+}
+```

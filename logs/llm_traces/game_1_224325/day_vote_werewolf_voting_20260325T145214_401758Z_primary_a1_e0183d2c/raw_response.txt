@@ -1,0 +1,8 @@
+```json
+{
+  "action_type": "vote",
+  "target": "player_4",
+  "reasoning_summary": "我是狼人，被player_4查杀。但player_1警长和player_2、player_5都对player_4的预言家身份有疑虑。我继续投player_4，与之前发言立场一致，声称他是悍跳狼。这样既维持我的伪装，也尝试反打他出局。",
+  "public_speech": ""
+}
+```

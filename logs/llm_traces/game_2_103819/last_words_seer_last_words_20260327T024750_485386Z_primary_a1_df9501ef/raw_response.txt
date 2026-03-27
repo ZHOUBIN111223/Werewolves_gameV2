@@ -1,0 +1,8 @@
+```json
+{
+  "action_type": "speak",
+  "target": "",
+  "reasoning_summary": "我是真预言家，被投票出局，需要留下遗言。我查验player_0是狼人，这是铁信息。投票分析：player_3、player_4、player_5都投了我，其中player_3和player_4在警长投票时投给player_3，现在又联手投死预言家，行为可疑。player_2是唯一跟我投player_0的，可能是好人。player_0是狼，需要好人集中火力。",
+  "public_speech": "我是预言家，遗言留在这里。第一晚查验player_0，铁狼。现在我被投出局，请大家记住这个信息。投票分析：player_3、player_4、player_5联手投死我，其中player_3警长竞选时自称女巫自救，但投票时却投给我而不是查杀狼人player_0，这个行为非常可疑。player_2是全场唯一跟我一起投player_0的，应该是好人。剩下player_4和player_5需要仔细分辨。我的验人结果不会错，player_0就是狼人，请好人阵营下一轮务必把player_0投出去。"
+}
+```

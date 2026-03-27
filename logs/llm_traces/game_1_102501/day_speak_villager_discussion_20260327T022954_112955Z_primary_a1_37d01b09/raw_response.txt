@@ -1,0 +1,6 @@
+{
+  "action_type": "speak",
+  "target": "",
+  "reasoning_summary": "女巫player_2报银水说救了player_0，这大幅提升player_0是真预言家的可信度。我之前对player_0持观望态度，现在应该调整站边。同时需要观察其他玩家的反应。",
+  "public_speech": "player_2报银水说昨晚救了player_0，这个信息很关键。狼人自刀预言家的风险太大，我倾向于相信player_0是真预言家。之前我和player_4对首夜验猎人的质疑有一定道理，但现在银水信息更重要。接下来我会跟着预言家的方向走，也想观察一下谁对银水信息反应异常。"
+}

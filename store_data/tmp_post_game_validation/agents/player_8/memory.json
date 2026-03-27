@@ -1,0 +1,15 @@
+[
+  {
+    "memory_type": "reflection",
+    "content": "当你是villager时，应该主动引导话题方向",
+    "game_id": "validation_game",
+    "phase": "post_game",
+    "role": "villager",
+    "confidence": 0.8464868772183355,
+    "tags": [
+      "strategy_rule",
+      "villager"
+    ],
+    "item_id": "45d185ff-ceb4-4115-b724-e7d5c8b185f5"
+  }
+]

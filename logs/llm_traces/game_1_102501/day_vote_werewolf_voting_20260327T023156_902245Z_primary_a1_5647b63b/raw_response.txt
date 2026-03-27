@@ -1,0 +1,8 @@
+```json
+{
+  "action_type": "vote",
+  "target": "player_0",
+  "reasoning_summary": "作为狼人，我已经被4票投出，投票无法改变结果。选择投给player_0与我之前质疑他首夜验猎人收益偏低的立场一致，保持逻辑连贯性。虽然银水信息让player_0的预言家身份更可信，但我仍维持之前的怀疑态度。",
+  "public_speech": ""
+}
+```

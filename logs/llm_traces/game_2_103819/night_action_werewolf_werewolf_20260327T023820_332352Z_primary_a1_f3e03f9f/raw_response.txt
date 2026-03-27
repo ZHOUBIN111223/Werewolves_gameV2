@@ -1,0 +1,8 @@
+```json
+{
+  "action_type": "kill",
+  "target": "player_3",
+  "reasoning_summary": "第一夜无信息可参考，选择中间位置玩家作为目标，避免过于明显的边缘位置偏好，同时为后续白天发言留出操作空间",
+  "public_speech": ""
+}
+```

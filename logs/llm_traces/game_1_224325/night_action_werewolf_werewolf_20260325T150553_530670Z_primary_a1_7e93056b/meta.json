@@ -1,0 +1,13 @@
+{
+  "timestamp_utc": "20260325T150553_530670Z",
+  "provider": "primary",
+  "attempt": 1,
+  "prompt_type": "action",
+  "game_id": "game_1_224325",
+  "role": "werewolf",
+  "phase": "night_3",
+  "request_kind": "night_action",
+  "current_subphase": "werewolf",
+  "model": "openai/glm-5",
+  "api_base": "https://coding.dashscope.aliyuncs.com/v1"
+}

@@ -1,0 +1,6 @@
+{
+  "action_type": "vote",
+  "target": "player_2",
+  "reasoning_summary": "player_1是预言家已确认，player_0是狼人已死亡，场上只剩一只狼。player_2公然歪曲票型记录，说我反水，但我的警长票和日票都投给player_1，根本没有反水。反倒是player_2自己警长票投player_1、日票转投player_0（被查杀的狼人），这才是真正的问题行为。player_2造谣带节奏的行为非常像狼人试图混淆视听。",
+  "public_speech": ""
+}

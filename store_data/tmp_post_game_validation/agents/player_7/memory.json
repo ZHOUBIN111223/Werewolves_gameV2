@@ -1,0 +1,15 @@
+[
+  {
+    "memory_type": "reflection",
+    "content": "当你是guard时，应该主动引导话题方向",
+    "game_id": "validation_game",
+    "phase": "post_game",
+    "role": "guard",
+    "confidence": 0.7518979684246032,
+    "tags": [
+      "strategy_rule",
+      "guard"
+    ],
+    "item_id": "3321a8ff-6af9-4d6c-a83b-eeee9c1719f4"
+  }
+]

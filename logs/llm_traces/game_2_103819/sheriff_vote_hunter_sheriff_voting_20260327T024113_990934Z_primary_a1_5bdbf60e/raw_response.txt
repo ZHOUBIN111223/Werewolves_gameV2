@@ -1,0 +1,8 @@
+```json
+{
+  "action_type": "vote",
+  "target": "player_1",
+  "reasoning_summary": "player_1声称预言家并查杀player_0是狼人，这个信息如果为真对好人阵营价值很大。player_0投票给player_3的行为也符合被查杀狼人的自保逻辑。player_3作为女巫虽然可信，但她对player_1的态度是观望验证，没有反驳。我倾向于支持有明确查杀信息的player_1拿警徽带队，后续可以通过发言和投票验证真假。",
+  "public_speech": ""
+}
+```

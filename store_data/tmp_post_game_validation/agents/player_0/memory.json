@@ -1,0 +1,15 @@
+[
+  {
+    "memory_type": "reflection",
+    "content": "当你是werewolf时，前期应低调观察，后期再发挥作用",
+    "game_id": "validation_game",
+    "phase": "post_game",
+    "role": "werewolf",
+    "confidence": 0.5092740132061111,
+    "tags": [
+      "strategy_rule",
+      "werewolf"
+    ],
+    "item_id": "920d6f84-f0da-41fa-a32f-be96744a23e6"
+  }
+]

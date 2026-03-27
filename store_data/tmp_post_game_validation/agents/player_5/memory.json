@@ -1,0 +1,15 @@
+[
+  {
+    "memory_type": "reflection",
+    "content": "当你是witch时，应该主动引导话题方向",
+    "game_id": "validation_game",
+    "phase": "post_game",
+    "role": "witch",
+    "confidence": 0.6395375191240201,
+    "tags": [
+      "strategy_rule",
+      "witch"
+    ],
+    "item_id": "042b22cc-e521-4e08-96ab-5e83aa83ddec"
+  }
+]

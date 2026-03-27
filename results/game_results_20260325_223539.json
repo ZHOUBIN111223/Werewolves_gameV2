@@ -1,0 +1,18 @@
+{
+  "summary": {
+    "total_games": 1,
+    "successful_games": 0,
+    "failed_games": 1,
+    "duration_seconds": 32.220957,
+    "start_time": "2026-03-25T22:35:07.341938",
+    "end_time": "2026-03-25T22:35:39.562895",
+    "winner_counts": {}
+  },
+  "details": [
+    {
+      "game_id": "game_1_223507",
+      "success": false,
+      "error": "Timed out waiting for action from player_0 during day_vote"
+    }
+  ]
+}

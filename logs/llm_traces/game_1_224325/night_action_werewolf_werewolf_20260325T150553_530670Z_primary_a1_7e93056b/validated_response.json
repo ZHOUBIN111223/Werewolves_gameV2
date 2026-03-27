@@ -1,0 +1,6 @@
+{
+  "action_type": "kill",
+  "target": "player_2",
+  "reasoning_summary": "player_2和player_5昨天都投了我，但player_3是警长且在为我辩护。杀player_2可以减少一张投我的票，同时保留player_3这个'保护伞'。如果player_3继续带队怀疑player_5，我可以在3人局中存活。",
+  "public_speech": ""
+}

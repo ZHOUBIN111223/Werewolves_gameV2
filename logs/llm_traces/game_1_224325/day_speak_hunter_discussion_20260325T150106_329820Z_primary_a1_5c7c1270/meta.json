@@ -1,0 +1,13 @@
+{
+  "timestamp_utc": "20260325T150106_329820Z",
+  "provider": "primary",
+  "attempt": 1,
+  "prompt_type": "action",
+  "game_id": "game_1_224325",
+  "role": "hunter",
+  "phase": "day_2",
+  "request_kind": "day_speak",
+  "current_subphase": "discussion",
+  "model": "openai/glm-5",
+  "api_base": "https://coding.dashscope.aliyuncs.com/v1"
+}

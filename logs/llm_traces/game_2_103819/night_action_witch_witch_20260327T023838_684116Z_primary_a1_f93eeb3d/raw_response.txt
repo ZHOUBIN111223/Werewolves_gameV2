@@ -1,0 +1,8 @@
+```json
+{
+  "action_type": "heal",
+  "target": "player_3",
+  "reasoning_summary": "我是player_3女巫，被狼人袭击的是我自己。第一夜使用解药自保是最优策略，确保自己存活才能在后续回合发挥毒药和解药的信息优势。如果女巫首夜死亡，好人阵营将失去重要的夜间信息来源。",
+  "public_speech": ""
+}
+```

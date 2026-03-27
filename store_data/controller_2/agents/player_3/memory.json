@@ -1,0 +1,2096 @@
+[
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'game_started', 'players': ['player_0', 'player_1', 'player_2', 'player_3', 'player_4', 'player_5']}",
+    "game_id": "game_2_195727",
+    "phase": "setup",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "52c26f2d-6464-481b-9903-b8fcd28cb32f"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Starting phase processing for setup', 'current_phase': 'setup', 'alive_players': ['player_0', 'player_1', 'player_2', 'player_3', 'player_4', 'player_5']}",
+    "game_id": "game_2_195727",
+    "phase": "setup",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "c28badb1-a81f-4ac5-a990-7e1d81b5d08d"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Phase advanced to night_1', 'new_phase': 'night_1', 'previous_phase': 'setup', 'subphase': 'guard'}",
+    "game_id": "game_2_195727",
+    "phase": "night_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "0241d376-8ab8-4ef1-8b20-5cc1eb992b7e"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Completed phase processing for setup, now in night_1', 'current_phase': 'night_1', 'previous_phase': 'setup', 'alive_players': ['player_0', 'player_1', 'player_2', 'player_3', 'player_4', 'player_5']}",
+    "game_id": "game_2_195727",
+    "phase": "night_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "da95a299-b465-4de8-a03e-7b9f650a3e7b"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Starting phase processing for night_1', 'current_phase': 'night_1', 'alive_players': ['player_0', 'player_1', 'player_2', 'player_3']}",
+    "game_id": "game_2_195727",
+    "phase": "night_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "25182d49-f9e5-4c57-b198-1d20676ac0fc"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Entered POST_GAME and forced finalization', 'previous_phase': 'night_1', 'resolution_reason': 'standard_victory', 'alive_players': ['player_0', 'player_1', 'player_2', 'player_3']}",
+    "game_id": "game_2_195727",
+    "phase": "post_game",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "9eb64097-d761-4c79-b542-12019af1ce76"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Game ended. Winner: werewolves', 'winner': 'werewolves', 'resolution_reason': 'standard_victory', 'final_alive_players': ['player_0', 'player_1', 'player_2', 'player_3']}",
+    "game_id": "game_2_195727",
+    "phase": "post_game",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "8ae19e42-58b6-44db-bba0-4d2ab3b7e7b6"
+  },
+  {
+    "memory_type": "reflection",
+    "content": "当你是werewolf时，应该主动引导话题方向",
+    "game_id": "game_2_195727",
+    "phase": "post_game",
+    "role": "werewolf",
+    "confidence": 0.6576358263237579,
+    "tags": [
+      "strategy_rule",
+      "werewolf"
+    ],
+    "item_id": "ce578678-50f7-44c9-aad1-ab3551173dc2"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'game_started', 'players': ['player_0', 'player_1', 'player_2', 'player_3', 'player_4', 'player_5']}",
+    "game_id": "game_2_201413",
+    "phase": "setup",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "7fafef76-390c-4907-bcc7-15bfe13483a4"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Starting phase processing for setup', 'current_phase': 'setup', 'alive_players': ['player_0', 'player_1', 'player_2', 'player_3', 'player_4', 'player_5']}",
+    "game_id": "game_2_201413",
+    "phase": "setup",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "8f3f7070-fd00-421e-a449-891c7a1dfbaf"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Phase advanced to night_1', 'new_phase': 'night_1', 'previous_phase': 'setup', 'subphase': 'guard'}",
+    "game_id": "game_2_201413",
+    "phase": "night_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "6098ce0a-c404-469f-8d20-dbfbd8be5943"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Completed phase processing for setup, now in night_1', 'current_phase': 'night_1', 'previous_phase': 'setup', 'alive_players': ['player_0', 'player_1', 'player_2', 'player_3', 'player_4', 'player_5']}",
+    "game_id": "game_2_201413",
+    "phase": "night_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "e4c76787-c695-4711-9358-8400d24aa895"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Starting phase processing for night_1', 'current_phase': 'night_1', 'alive_players': ['player_0', 'player_1', 'player_2', 'player_3', 'player_4', 'player_5']}",
+    "game_id": "game_2_201413",
+    "phase": "night_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "32e69a23-2c3f-4e45-a72f-ce1f729834bf"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Phase advanced to day_1', 'new_phase': 'day_1', 'previous_phase': 'night_1', 'subphase': 'daybreak'}",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "0d9c4809-71e6-434c-9bd0-3a47ee4808df"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Completed phase processing for night_1, now in day_1', 'current_phase': 'day_1', 'previous_phase': 'night_1', 'alive_players': ['player_0', 'player_1', 'player_2', 'player_3', 'player_4', 'player_5']}",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "459822d9-74c4-4f51-a5ee-06b704d67a61"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'candidates': ['player_0', 'player_2', 'player_3', 'player_5']}",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "c4104007-8bd5-41f9-bc22-dc803145050d"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'speaker': 'player_0', 'content': '大家好，我来竞选警长。昨晚是平安夜，说明守卫可能保护成功或者狼人战术选择，这个信息对我们后续判断很有价值。我如果当选警长，会认真听取每个人的发言，结合票型和逻辑来找狼，希望大家支持我。'}",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "6a278bb9-515d-42a0-8ba4-b7d66d9ed203"
+  },
+  {
+    "memory_type": "speech",
+    "content": "大家好，我来竞选警长。昨晚是平安夜，说明守卫可能保护成功或者狼人战术选择，这个信息对我们后续判断很有价值。我如果当选警长，会认真听取每个人的发言，结合票型和逻辑来找狼，希望大家支持我。",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "player_0",
+    "confidence": 1.0,
+    "tags": [
+      "speech",
+      "discussion"
+    ],
+    "item_id": "f0a6a1d7-2e6f-47ab-99e2-51982a26c659"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'speaker': 'player_2', 'content': '大家好，我也来竞选警长。昨晚平安夜，信息量不大，但我认为这反而说明狼人可能在隐藏战术或者守卫保护成功。如果我当选警长，我会重点关注发言的逻辑链条和投票时的站位，尤其是那些回避关键问题或者站边模糊的玩家。希望大家支持我，我会尽力带好队。'}",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "a4808eee-a8e1-45c1-96f7-a50487b281b9"
+  },
+  {
+    "memory_type": "speech",
+    "content": "大家好，我也来竞选警长。昨晚平安夜，信息量不大，但我认为这反而说明狼人可能在隐藏战术或者守卫保护成功。如果我当选警长，我会重点关注发言的逻辑链条和投票时的站位，尤其是那些回避关键问题或者站边模糊的玩家。希望大家支持我，我会尽力带好队。",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "player_2",
+    "confidence": 1.0,
+    "tags": [
+      "speech",
+      "discussion"
+    ],
+    "item_id": "683fa04d-b8e9-4c3c-b950-162ec220e929"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'action_requested', 'actor': 'player_3', 'role': 'werewolf', 'request_kind': 'sheriff_campaign_speak', 'allowed_actions': ['speak'], 'alive_players': ['player_0', 'player_1', 'player_2', 'player_3', 'player_4', 'player_5'], 'available_targets': [], 'last_guard_target': None, 'sheriff_candidates': ['player_0', 'player_2', 'player_3', 'player_5'], 'subphase': 'sheriff_campaign'}",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "002767c8-fdea-4519-b902-76820789a138"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'speaker': 'player_3', 'content': '大家好，我也来竞选警长。昨晚平安夜，信息确实有限，但我认为可以从发言中找突破口。我注意到前面的竞选者都提到了逻辑和票型分析，这些确实是关键。如果当选警长，我会特别关注那些发言中刻意回避某些话题、或者站边过于急切的玩家。希望大家支持我，我会尽力带好队。'}",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "abab5883-821f-40b7-94fc-99a86fc498e5"
+  },
+  {
+    "memory_type": "speech",
+    "content": "大家好，我也来竞选警长。昨晚平安夜，信息确实有限，但我认为可以从发言中找突破口。我注意到前面的竞选者都提到了逻辑和票型分析，这些确实是关键。如果当选警长，我会特别关注那些发言中刻意回避某些话题、或者站边过于急切的玩家。希望大家支持我，我会尽力带好队。",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "player_3",
+    "confidence": 1.0,
+    "tags": [
+      "speech",
+      "discussion"
+    ],
+    "item_id": "370ae758-791e-4b69-81c1-4b8058da5af4"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'speaker': 'player_5', 'content': '我是预言家，昨晚查验了player_0，他是狼人。player_0竟然敢上警竞选，明显想拿警徽带节奏，大家一定要警惕。我作为预言家需要警徽来传递查验信息，希望大家把票投给我，今天先把player_0投出去。'}",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "1ca6508a-5297-4e64-988d-dc98458ba9e9"
+  },
+  {
+    "memory_type": "speech",
+    "content": "我是预言家，昨晚查验了player_0，他是狼人。player_0竟然敢上警竞选，明显想拿警徽带节奏，大家一定要警惕。我作为预言家需要警徽来传递查验信息，希望大家把票投给我，今天先把player_0投出去。",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "player_5",
+    "confidence": 1.0,
+    "tags": [
+      "speech",
+      "discussion"
+    ],
+    "item_id": "081c24ff-48f9-4a17-9fbb-eab7b6f14e8d"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'voter': 'player_1', 'target': 'player_5'}",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "9a17dcc7-7778-4e7e-abc9-2b43207b5157"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'voter': 'player_4', 'target': 'player_5'}",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "5d848bf4-8306-4e02-a483-0e6556356592"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'vote_counts': {'player_0': 0, 'player_2': 0, 'player_3': 0, 'player_5': 2}, 'candidates': ['player_0', 'player_2', 'player_3', 'player_5']}",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "a78a43f3-b433-4bd6-9325-9ad8a27fccff"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'sheriff': 'player_5', 'badge_holder': 'player_5'}",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "01ad05d0-1a5a-4682-a4b9-4e2db9ffaafa"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': '天亮了，昨夜是平安夜', 'deaths': []}",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "1afe76f6-edf5-43d0-83ab-58e462812dfd"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'badge_holder': 'player_5', 'speaking_order': ['player_4', 'player_3', 'player_2', 'player_1', 'player_0', 'player_5']}",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "a1ae3f26-1f74-4397-95e8-0e8ea5c1a4ce"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'speaker': 'player_4', 'content': '我投票给player_5是因为他跳预言家且有查杀，警徽对真预言家传递信息很重要。但我也保持警惕，不能排除悍跳的可能。player_0被查杀，现在警徽已经落定，我想听听player_0的辩解，看看他怎么回应这个查杀。同时也会观察其他玩家的站边和发言逻辑，再做判断。'}",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "dadb95b9-d69f-4332-ad53-d1d43a230ba2"
+  },
+  {
+    "memory_type": "speech",
+    "content": "我投票给player_5是因为他跳预言家且有查杀，警徽对真预言家传递信息很重要。但我也保持警惕，不能排除悍跳的可能。player_0被查杀，现在警徽已经落定，我想听听player_0的辩解，看看他怎么回应这个查杀。同时也会观察其他玩家的站边和发言逻辑，再做判断。",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "player_4",
+    "confidence": 1.0,
+    "tags": [
+      "speech",
+      "discussion"
+    ],
+    "item_id": "561a5d66-5873-4198-9d6f-367b6dde874c"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'action_requested', 'actor': 'player_3', 'role': 'werewolf', 'request_kind': 'day_speak', 'allowed_actions': ['speak'], 'alive_players': ['player_0', 'player_1', 'player_2', 'player_3', 'player_4', 'player_5'], 'available_targets': [], 'last_guard_target': None, 'sheriff_candidates': ['player_0', 'player_2', 'player_3', 'player_5'], 'subphase': 'discussion'}",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "d8761fd6-f205-4bc3-bc57-195b2c3b91c1"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'speaker': 'player_3', 'content': 'player_5拿到警徽后形势很清晰了，但我有几点疑虑。第一，player_5首夜查杀player_0，这个信息太关键了，如果是真预言家确实重要，但如果是悍跳狼想带节奏，也很合理。第二，昨晚平安夜，守卫保护成功或狼人选择不刀都有可能，这增加了判断难度。我倾向于先听player_0的辩解，看他能否给出合理的身份解释，同时观察player_5后续的验人方向和逻辑是否自洽。'}",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "294ac58a-5ebf-4bf1-baa8-014dfc4a459b"
+  },
+  {
+    "memory_type": "speech",
+    "content": "player_5拿到警徽后形势很清晰了，但我有几点疑虑。第一，player_5首夜查杀player_0，这个信息太关键了，如果是真预言家确实重要，但如果是悍跳狼想带节奏，也很合理。第二，昨晚平安夜，守卫保护成功或狼人选择不刀都有可能，这增加了判断难度。我倾向于先听player_0的辩解，看他能否给出合理的身份解释，同时观察player_5后续的验人方向和逻辑是否自洽。",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "player_3",
+    "confidence": 1.0,
+    "tags": [
+      "speech",
+      "discussion"
+    ],
+    "item_id": "bb9d6944-25bc-4f6e-8ee7-4e4838d6a2c5"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'speaker': 'player_2', 'content': 'player_5拿警徽后形势确实比较清晰，但我也有几点想法。首先，player_5首夜查杀player_0这个信息太关键了，如果是真预言家，那player_0敢上警竞选确实像狼人想拿警徽带节奏。但如果player_5是悍跳狼，这个查杀选择也很有针对性，因为player_0上警本身就容易被怀疑。其次，player_1和player_4在竞选阶段就给player_5投票，站边比较快，我后续会关注他们的发言逻辑。现在最关键的是听player_0怎么辩解，看他能不能给出合理的身份解释或者找出player_5发言的漏洞。'}",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "6743baac-5675-4156-90cf-0bc842251098"
+  },
+  {
+    "memory_type": "speech",
+    "content": "player_5拿警徽后形势确实比较清晰，但我也有几点想法。首先，player_5首夜查杀player_0这个信息太关键了，如果是真预言家，那player_0敢上警竞选确实像狼人想拿警徽带节奏。但如果player_5是悍跳狼，这个查杀选择也很有针对性，因为player_0上警本身就容易被怀疑。其次，player_1和player_4在竞选阶段就给player_5投票，站边比较快，我后续会关注他们的发言逻辑。现在最关键的是听player_0怎么辩解，看他能不能给出合理的身份解释或者找出player_5发言的漏洞。",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "player_2",
+    "confidence": 1.0,
+    "tags": [
+      "speech",
+      "discussion"
+    ],
+    "item_id": "bd7ff6a7-bb42-4b05-a212-a4ae0b58937b"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'speaker': 'player_1', 'content': '我投票给player_5是因为他有查杀信息，警徽对预言家传递验人结果很重要。但我也保持警惕，不能排除悍跳的可能。player_2提到我和player_4站边快，其实我只是觉得有查杀的信息优先级更高，并非盲目跟从。现在最关键的是听player_0怎么辩解，看他能否给出合理的身份解释或找出player_5发言的漏洞。'}",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "363c1a89-1d28-471f-a651-2f65f3f360e8"
+  },
+  {
+    "memory_type": "speech",
+    "content": "我投票给player_5是因为他有查杀信息，警徽对预言家传递验人结果很重要。但我也保持警惕，不能排除悍跳的可能。player_2提到我和player_4站边快，其实我只是觉得有查杀的信息优先级更高，并非盲目跟从。现在最关键的是听player_0怎么辩解，看他能否给出合理的身份解释或找出player_5发言的漏洞。",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "player_1",
+    "confidence": 1.0,
+    "tags": [
+      "speech",
+      "discussion"
+    ],
+    "item_id": "bc9d705c-78f6-498d-84d4-1b16d6f3c6d0"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'speaker': 'player_0', 'content': 'player_5跳预言家查杀我，但我有几个疑点想说。第一，竞选发言时player_5是最后发言的，他完全可以更早跳出来，为什么等到大家都发言完才跳？第二，player_1和player_4在我还没有任何辩解机会的时候就直接投票给player_5，这个站边速度是不是太快了？第三，如果我是狼人，明知自己可能被查杀还上警竞选，这个逻辑说得通吗？我怀疑player_5是悍跳狼，利用查杀上警的人来拿警徽，请大家冷静分析，不要急着站边。'}",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "dea2ffb0-c101-4195-9cac-5cf5cd78da19"
+  },
+  {
+    "memory_type": "speech",
+    "content": "player_5跳预言家查杀我，但我有几个疑点想说。第一，竞选发言时player_5是最后发言的，他完全可以更早跳出来，为什么等到大家都发言完才跳？第二，player_1和player_4在我还没有任何辩解机会的时候就直接投票给player_5，这个站边速度是不是太快了？第三，如果我是狼人，明知自己可能被查杀还上警竞选，这个逻辑说得通吗？我怀疑player_5是悍跳狼，利用查杀上警的人来拿警徽，请大家冷静分析，不要急着站边。",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "player_0",
+    "confidence": 1.0,
+    "tags": [
+      "speech",
+      "discussion"
+    ],
+    "item_id": "b5638da8-8bdb-45ea-8e3b-4bd53a5a9c9d"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'speaker': 'player_5', 'content': '回应player_0的三点质疑：第一，我最后发言是因为竞选顺序是随机的，不是我选择等待。第二，player_1和player_4快速站边是因为查杀信息明确，有预言家跳出来带查杀，优先支持拿警徽是合理选择。第三，你上警竞选恰恰是狼人最激进的打法——想拿警徽带节奏，没想到我真预言家首夜就查到了你。今天请大家把票投给player_0，把他投出去。'}",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "6b24e7b8-cf72-40c6-96b5-bd88a0b1ca70"
+  },
+  {
+    "memory_type": "speech",
+    "content": "回应player_0的三点质疑：第一，我最后发言是因为竞选顺序是随机的，不是我选择等待。第二，player_1和player_4快速站边是因为查杀信息明确，有预言家跳出来带查杀，优先支持拿警徽是合理选择。第三，你上警竞选恰恰是狼人最激进的打法——想拿警徽带节奏，没想到我真预言家首夜就查到了你。今天请大家把票投给player_0，把他投出去。",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "player_5",
+    "confidence": 1.0,
+    "tags": [
+      "speech",
+      "discussion"
+    ],
+    "item_id": "b255be8b-9848-4c47-92ee-8a04d042677c"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'player_0 voted for player_5', 'voter': 'player_0', 'target': 'player_5'}",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "3fb7e914-5406-4cc7-a36a-ddee25d6565b"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'player_1 voted for player_0', 'voter': 'player_1', 'target': 'player_0'}",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "7c494fd4-4045-48c0-943a-82932f234b1f"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'player_2 voted for player_0', 'voter': 'player_2', 'target': 'player_0'}",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "27c43b47-b1f6-4f10-b649-c622d9f38ef2"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'action_requested', 'actor': 'player_3', 'role': 'werewolf', 'request_kind': 'day_vote', 'allowed_actions': ['vote'], 'alive_players': ['player_0', 'player_1', 'player_2', 'player_3', 'player_4', 'player_5'], 'available_targets': ['player_0', 'player_1', 'player_2', 'player_4', 'player_5'], 'last_guard_target': None, 'sheriff_candidates': ['player_0', 'player_2', 'player_3', 'player_5'], 'subphase': 'voting'}",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "e2b06778-d1af-4a40-b253-0a9cb1be1b23"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'player_3 voted for player_0', 'voter': 'player_3', 'target': 'player_0'}",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "0cff56fe-50cc-49be-b2fe-4281ef96d05e"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'player_4 voted for player_0', 'voter': 'player_4', 'target': 'player_0'}",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "9ba838d9-6e49-4c77-b51a-ed15d1d6fbc7"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'player_5 voted for player_0', 'voter': 'player_5', 'target': 'player_0'}",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "f77146ea-feec-4700-97e4-f336eec117d7"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Starting phase processing for day_1', 'current_phase': 'day_1', 'alive_players': ['player_1', 'player_2', 'player_3', 'player_4', 'player_5']}",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "f4453729-7ae0-4c80-a914-5cd7ba6be9ae"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': \"Vote counts: {'player_0': 5, 'player_1': 0, 'player_2': 0, 'player_3': 0, 'player_4': 0, 'player_5': 1}\", 'vote_counts': {'player_0': 5, 'player_1': 0, 'player_2': 0, 'player_3': 0, 'player_4': 0, 'player_5': 1}}",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "a256bf1e-c483-4009-bfc5-c72588b6b3e6"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'player_0 was eliminated by vote', 'eliminated_player': 'player_0', 'reason': 'eliminated by vote'}",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "a14f988c-2eae-4af9-b759-d6e3af7f4c17"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'speakers': ['player_0'], 'reason': 'vote_elimination'}",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "a7886a12-2fe2-4dac-be9d-14a658e21fad"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'speaker': 'player_0', 'reason': 'vote_elimination'}",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "1237152e-4ad9-44d9-911b-1612ca73e786"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'speaker': 'player_0', 'content': '好吧，我确实是狼人。但我想说几点：第一，player_5首夜查杀我，这个运气确实好，但他的验人逻辑我持保留态度。第二，player_1和player_4在竞选阶段就快速站边player_5，这里面有没有狼在趁机洗白自己？第三，剩下的好人要仔细分辨，别被表面站边迷惑。最后，游戏还没结束，大家继续加油。'}",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "21ca3483-4ebc-4c56-8ab9-122ee4cadbcb"
+  },
+  {
+    "memory_type": "speech",
+    "content": "好吧，我确实是狼人。但我想说几点：第一，player_5首夜查杀我，这个运气确实好，但他的验人逻辑我持保留态度。第二，player_1和player_4在竞选阶段就快速站边player_5，这里面有没有狼在趁机洗白自己？第三，剩下的好人要仔细分辨，别被表面站边迷惑。最后，游戏还没结束，大家继续加油。",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "player_0",
+    "confidence": 1.0,
+    "tags": [
+      "speech",
+      "discussion"
+    ],
+    "item_id": "efb437bf-5f98-48a6-a288-ce39fea73d22"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Starting phase processing for day_1', 'current_phase': 'day_1', 'alive_players': ['player_1', 'player_2', 'player_3', 'player_4', 'player_5']}",
+    "game_id": "game_2_201413",
+    "phase": "day_1",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "19751cf6-da52-4f9b-bc5b-06eb33ac6ec7"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Phase advanced to night_2', 'new_phase': 'night_2', 'previous_phase': 'day_1', 'subphase': 'guard'}",
+    "game_id": "game_2_201413",
+    "phase": "night_2",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "5c4c5cce-f99e-43fb-96d0-ccbd45fbe404"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Completed phase processing for day_1, now in night_2', 'current_phase': 'night_2', 'previous_phase': 'day_1', 'alive_players': ['player_1', 'player_2', 'player_3', 'player_4', 'player_5']}",
+    "game_id": "game_2_201413",
+    "phase": "night_2",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "7855a015-0673-44fb-8643-69f6dca11303"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'action_requested', 'actor': 'player_3', 'role': 'werewolf', 'request_kind': 'night_action', 'allowed_actions': ['kill'], 'alive_players': ['player_1', 'player_2', 'player_3', 'player_4', 'player_5'], 'available_targets': ['player_1', 'player_2', 'player_3', 'player_4', 'player_5'], 'last_guard_target': None, 'sheriff_candidates': ['player_0', 'player_2', 'player_3', 'player_5'], 'subphase': 'werewolf'}",
+    "game_id": "game_2_201413",
+    "phase": "night_2",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "f40fdec5-4216-4c92-bf66-a75b84cda469"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Starting phase processing for night_2', 'current_phase': 'night_2', 'alive_players': ['player_1', 'player_2', 'player_3', 'player_4']}",
+    "game_id": "game_2_201413",
+    "phase": "night_2",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "62f933fa-4107-4402-9619-192d7010b9a4"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Phase advanced to day_2', 'new_phase': 'day_2', 'previous_phase': 'night_2', 'subphase': 'daybreak'}",
+    "game_id": "game_2_201413",
+    "phase": "day_2",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "fd4305ab-21d8-496e-a4c3-6a786ce6f455"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Completed phase processing for night_2, now in day_2', 'current_phase': 'day_2', 'previous_phase': 'night_2', 'alive_players': ['player_1', 'player_2', 'player_3', 'player_4']}",
+    "game_id": "game_2_201413",
+    "phase": "day_2",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "d10a8c6d-a371-47df-b843-6dd1ffe8d064"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': \"天亮了，昨夜死亡玩家: ['player_5']\", 'deaths': ['player_5']}",
+    "game_id": "game_2_201413",
+    "phase": "day_2",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "a5733702-af85-48a2-a226-6dde3475d285"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'from_player': 'player_5', 'to_player': 'player_1', 'badge_holder': 'player_1'}",
+    "game_id": "game_2_201413",
+    "phase": "day_2",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "0d2f0a6b-7901-4efd-a244-17f0d1ad5462"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'badge_holder': 'player_1', 'speaking_order': ['player_4', 'player_3', 'player_2', 'player_1']}",
+    "game_id": "game_2_201413",
+    "phase": "day_2",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "f50b9713-5c43-4d34-a2af-803cfde506be"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'speaker': 'player_4', 'content': '昨晚player_5被刀，证实他是真预言家，player_0确实是狼。player_0遗言说我和player_1快速站边player_5可能有问题，但我是村民，这点我问心无愧。反过来想，player_0为什么要特意点我们两个？可能是想保护他的狼队友。警徽传给了player_1，我想听听player_1怎么分析现在的局势，以及player_2和player_3对player_0遗言的看法。'}",
+    "game_id": "game_2_201413",
+    "phase": "day_2",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "1d6eb196-8532-4375-a9ca-a485255394f9"
+  },
+  {
+    "memory_type": "speech",
+    "content": "昨晚player_5被刀，证实他是真预言家，player_0确实是狼。player_0遗言说我和player_1快速站边player_5可能有问题，但我是村民，这点我问心无愧。反过来想，player_0为什么要特意点我们两个？可能是想保护他的狼队友。警徽传给了player_1，我想听听player_1怎么分析现在的局势，以及player_2和player_3对player_0遗言的看法。",
+    "game_id": "game_2_201413",
+    "phase": "day_2",
+    "role": "player_4",
+    "confidence": 1.0,
+    "tags": [
+      "speech",
+      "discussion"
+    ],
+    "item_id": "a1aa7e8d-bc28-4d89-9323-ab1e66bca234"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'action_requested', 'actor': 'player_3', 'role': 'werewolf', 'request_kind': 'day_speak', 'allowed_actions': ['speak'], 'alive_players': ['player_1', 'player_2', 'player_3', 'player_4'], 'available_targets': [], 'last_guard_target': None, 'sheriff_candidates': [], 'subphase': 'discussion'}",
+    "game_id": "game_2_201413",
+    "phase": "day_2",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "178b3af3-2bd3-47d3-8865-c8b5903a2933"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'speaker': 'player_3', 'content': 'player_5被刀证实是真预言家，这点没有疑问。player_0遗言确实有可能是想保护狼队友，但我有个不同角度——player_0为什么只点player_1和player_4，却没有提我和player_2？这会不会是故意留一个口子？player_4刚才自辩很积极，但我更想听听player_2的想法，毕竟player_2昨天投票给player_0之前，发言里对player_5和player_0都有质疑，立场比较模糊。'}",
+    "game_id": "game_2_201413",
+    "phase": "day_2",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "08fd4c38-2e83-419c-827f-c133a62fa61b"
+  },
+  {
+    "memory_type": "speech",
+    "content": "player_5被刀证实是真预言家，这点没有疑问。player_0遗言确实有可能是想保护狼队友，但我有个不同角度——player_0为什么只点player_1和player_4，却没有提我和player_2？这会不会是故意留一个口子？player_4刚才自辩很积极，但我更想听听player_2的想法，毕竟player_2昨天投票给player_0之前，发言里对player_5和player_0都有质疑，立场比较模糊。",
+    "game_id": "game_2_201413",
+    "phase": "day_2",
+    "role": "player_3",
+    "confidence": 1.0,
+    "tags": [
+      "speech",
+      "discussion"
+    ],
+    "item_id": "1623c3b0-3ef5-41bc-b585-aac18f9089aa"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'speaker': 'player_2', 'content': '我澄清一下我的立场：昨天我确实对player_5的查杀有疑虑，但最终投票给player_0是因为预言家的查杀信息优先级最高，这点我不后悔。现在分析剩余狼人，player_0遗言点player_1和player_4，但player_5作为预言家把警徽传给了player_1，这至少说明player_5临死前认为player_1是好人。player_3刚才说我立场模糊，但反过来想，player_0为什么不点player_3？这可能是故意留口子。我目前更倾向于怀疑player_3，想听听player_1拿到警徽后的分析。'}",
+    "game_id": "game_2_201413",
+    "phase": "day_2",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "02f2412f-404d-4092-86ac-969d21d609fe"
+  },
+  {
+    "memory_type": "speech",
+    "content": "我澄清一下我的立场：昨天我确实对player_5的查杀有疑虑，但最终投票给player_0是因为预言家的查杀信息优先级最高，这点我不后悔。现在分析剩余狼人，player_0遗言点player_1和player_4，但player_5作为预言家把警徽传给了player_1，这至少说明player_5临死前认为player_1是好人。player_3刚才说我立场模糊，但反过来想，player_0为什么不点player_3？这可能是故意留口子。我目前更倾向于怀疑player_3，想听听player_1拿到警徽后的分析。",
+    "game_id": "game_2_201413",
+    "phase": "day_2",
+    "role": "player_2",
+    "confidence": 1.0,
+    "tags": [
+      "speech",
+      "discussion"
+    ],
+    "item_id": "29465291-4707-4bbd-84de-8f2cea3df600"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'speaker': 'player_1', 'content': \"player_5把警徽传给我，我想他应该是信任我的站边。关于player_0的遗言，狼人临死前乱踩人是常见战术，大家要理性分析。我注意到player_3今天主动提出'player_0为什么不点我和player_2'这个角度，这个思路反而让我觉得可疑——狼人遗言故意不提队友，是想让好人往这个方向想，帮队友洗白。player_2昨天虽然质疑过player_5，但最终还是投了player_0，今天分析也相对客观。相比之下，player_3今天的发言更像是在带节奏。\"}",
+    "game_id": "game_2_201413",
+    "phase": "day_2",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "620ebac9-d8f4-48a8-bbd4-60fa12e39c38"
+  },
+  {
+    "memory_type": "speech",
+    "content": "player_5把警徽传给我，我想他应该是信任我的站边。关于player_0的遗言，狼人临死前乱踩人是常见战术，大家要理性分析。我注意到player_3今天主动提出'player_0为什么不点我和player_2'这个角度，这个思路反而让我觉得可疑——狼人遗言故意不提队友，是想让好人往这个方向想，帮队友洗白。player_2昨天虽然质疑过player_5，但最终还是投了player_0，今天分析也相对客观。相比之下，player_3今天的发言更像是在带节奏。",
+    "game_id": "game_2_201413",
+    "phase": "day_2",
+    "role": "player_1",
+    "confidence": 1.0,
+    "tags": [
+      "speech",
+      "discussion"
+    ],
+    "item_id": "e62bb61a-02e1-4d2c-a4a2-6bfbd0afeac0"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'player_1 voted for player_3', 'voter': 'player_1', 'target': 'player_3'}",
+    "game_id": "game_2_201413",
+    "phase": "day_2",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "9b5753d5-c5bc-4a12-8731-e7fc31a80cea"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'player_2 voted for player_3', 'voter': 'player_2', 'target': 'player_3'}",
+    "game_id": "game_2_201413",
+    "phase": "day_2",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "b04a2d4e-7161-4781-85a4-519f6952bab2"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'action_requested', 'actor': 'player_3', 'role': 'werewolf', 'request_kind': 'day_vote', 'allowed_actions': ['vote'], 'alive_players': ['player_1', 'player_2', 'player_3', 'player_4'], 'available_targets': ['player_1', 'player_2', 'player_4'], 'last_guard_target': None, 'sheriff_candidates': [], 'subphase': 'voting'}",
+    "game_id": "game_2_201413",
+    "phase": "day_2",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "14e8face-5929-431e-873a-3642ba66c9f6"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'player_3 voted for player_1', 'voter': 'player_3', 'target': 'player_1'}",
+    "game_id": "game_2_201413",
+    "phase": "day_2",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "1b89910d-9b8e-4da8-a0a6-520473701e27"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'player_4 voted for player_3', 'voter': 'player_4', 'target': 'player_3'}",
+    "game_id": "game_2_201413",
+    "phase": "day_2",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "6261b9d2-5686-4fcb-8ce3-dfd03bf82667"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Starting phase processing for day_2', 'current_phase': 'day_2', 'alive_players': ['player_1', 'player_2', 'player_4']}",
+    "game_id": "game_2_201413",
+    "phase": "day_2",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "af90155f-74c4-49ea-b740-bd5cecbe4f11"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': \"Vote counts: {'player_1': 1, 'player_2': 0, 'player_3': 3, 'player_4': 0}\", 'vote_counts': {'player_1': 1, 'player_2': 0, 'player_3': 3, 'player_4': 0}}",
+    "game_id": "game_2_201413",
+    "phase": "day_2",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "814997b2-7c0b-48e4-bedb-b903ff77066e"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'player_3 was eliminated by vote', 'eliminated_player': 'player_3', 'reason': 'eliminated by vote'}",
+    "game_id": "game_2_201413",
+    "phase": "day_2",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "eec8ae0e-d688-4d63-9416-e1711c31bcb5"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'speakers': ['player_3'], 'reason': 'vote_elimination'}",
+    "game_id": "game_2_201413",
+    "phase": "day_2",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "95dba36c-db8d-4dd8-ae62-3de78a8e4329"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'speaker': 'player_3', 'reason': 'vote_elimination'}",
+    "game_id": "game_2_201413",
+    "phase": "day_2",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "09eaafb1-300e-4716-9a1f-b4b5e2fa0b80"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'action_requested', 'actor': 'player_3', 'role': 'werewolf', 'request_kind': 'last_words', 'allowed_actions': ['speak'], 'alive_players': ['player_1', 'player_2', 'player_4'], 'available_targets': [], 'last_guard_target': None, 'sheriff_candidates': [], 'subphase': 'last_words'}",
+    "game_id": "game_2_201413",
+    "phase": "day_2",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "70025402-1f89-4f3a-a84d-5758faf343c4"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'speaker': 'player_3', 'content': '好吧，我确实是狼人。这局游戏我们狼人阵营确实输了。player_5首夜查杀player_0运气太好了，直接奠定局势。我昨晚刀player_5也是想阻止他继续验人，但没想到警徽流转给了player_1，信息还是传出去了。player_1和player_4你们两个昨天站边确实快，但我现在承认这是正确的判断。player_2你昨天的分析也很到位。这局好人们配合得很好，恭喜你们获胜。'}",
+    "game_id": "game_2_201413",
+    "phase": "day_2",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "41f7d496-b938-4aad-a808-6907a9d8616e"
+  },
+  {
+    "memory_type": "speech",
+    "content": "好吧，我确实是狼人。这局游戏我们狼人阵营确实输了。player_5首夜查杀player_0运气太好了，直接奠定局势。我昨晚刀player_5也是想阻止他继续验人，但没想到警徽流转给了player_1，信息还是传出去了。player_1和player_4你们两个昨天站边确实快，但我现在承认这是正确的判断。player_2你昨天的分析也很到位。这局好人们配合得很好，恭喜你们获胜。",
+    "game_id": "game_2_201413",
+    "phase": "day_2",
+    "role": "player_3",
+    "confidence": 1.0,
+    "tags": [
+      "speech",
+      "discussion"
+    ],
+    "item_id": "2fc3038a-6d37-4417-877c-99b80182bcde"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Starting phase processing for day_2', 'current_phase': 'day_2', 'alive_players': ['player_1', 'player_2', 'player_4']}",
+    "game_id": "game_2_201413",
+    "phase": "day_2",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "f286be60-61a7-4485-8abe-ad68ea65da99"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Entered POST_GAME and forced finalization', 'previous_phase': 'day_2', 'resolution_reason': 'standard_victory', 'alive_players': ['player_1', 'player_2', 'player_4']}",
+    "game_id": "game_2_201413",
+    "phase": "post_game",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "0f9d25ef-14f6-4204-9a85-89c9d340d5c2"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Game ended. Winner: villagers', 'winner': 'villagers', 'resolution_reason': 'standard_victory', 'final_alive_players': ['player_1', 'player_2', 'player_4']}",
+    "game_id": "game_2_201413",
+    "phase": "post_game",
+    "role": "werewolf",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "311d1fa5-d9a0-40b6-b57d-43551db5278e"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'game_started', 'players': ['player_0', 'player_1', 'player_2', 'player_3', 'player_4', 'player_5']}",
+    "game_id": "game_2_103819",
+    "phase": "setup",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "3a056859-27f0-4ea6-92d9-fbcc6d3052f1"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Starting phase processing for setup', 'current_phase': 'setup', 'alive_players': ['player_0', 'player_1', 'player_2', 'player_3', 'player_4', 'player_5']}",
+    "game_id": "game_2_103819",
+    "phase": "setup",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "3d207340-a7eb-4260-9d4c-ba2b2a882d81"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Phase advanced to night_1', 'new_phase': 'night_1', 'previous_phase': 'setup', 'subphase': 'guard'}",
+    "game_id": "game_2_103819",
+    "phase": "night_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "5930d853-4281-470c-999e-52cdb8f30bd7"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Completed phase processing for setup, now in night_1', 'current_phase': 'night_1', 'previous_phase': 'setup', 'alive_players': ['player_0', 'player_1', 'player_2', 'player_3', 'player_4', 'player_5']}",
+    "game_id": "game_2_103819",
+    "phase": "night_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "db48f515-2a55-42cb-8f24-fb09a76548a8"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'witch_night_info', 'attacked_player': 'player_3'}",
+    "game_id": "game_2_103819",
+    "phase": "night_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "7cccfda0-071e-4f3f-891e-2240bd904876"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'action_requested', 'actor': 'player_3', 'role': 'witch', 'request_kind': 'night_action', 'allowed_actions': ['heal', 'poison', 'skip'], 'alive_players': ['player_0', 'player_1', 'player_2', 'player_3', 'player_4', 'player_5'], 'available_targets': ['player_0', 'player_1', 'player_2', 'player_3', 'player_4', 'player_5'], 'last_guard_target': None, 'sheriff_candidates': [], 'subphase': 'witch'}",
+    "game_id": "game_2_103819",
+    "phase": "night_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "2c4b3a31-7bdb-4e8b-bf44-779e2e1a2642"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Starting phase processing for night_1', 'current_phase': 'night_1', 'alive_players': ['player_0', 'player_1', 'player_2', 'player_3', 'player_4', 'player_5']}",
+    "game_id": "game_2_103819",
+    "phase": "night_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "1168a8f4-7597-4b05-93a2-2e19ca66b5ab"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Phase advanced to day_1', 'new_phase': 'day_1', 'previous_phase': 'night_1', 'subphase': 'daybreak'}",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "6e121dc9-06c9-44d3-a992-d28f590a3f5f"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Completed phase processing for night_1, now in day_1', 'current_phase': 'day_1', 'previous_phase': 'night_1', 'alive_players': ['player_0', 'player_1', 'player_2', 'player_3', 'player_4', 'player_5']}",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "3fe2dde3-e220-4959-a31e-aceb8d8cf6cc"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'candidates': ['player_1', 'player_3']}",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "e25c9e42-f2d9-4f5d-9102-c57301a7b4c9"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'speaker': 'player_1', 'content': '我是预言家，昨晚查验了player_0，结果是狼人。我竞选警长就是为了带队把这只狼投出去，拿到警徽后我会继续查验关键位置，帮好人阵营建立信息优势。请大家把警徽票投给我，让我们一起赢下这局。'}",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "8ef473e1-c22e-4409-96d7-3476907153a4"
+  },
+  {
+    "memory_type": "speech",
+    "content": "我是预言家，昨晚查验了player_0，结果是狼人。我竞选警长就是为了带队把这只狼投出去，拿到警徽后我会继续查验关键位置，帮好人阵营建立信息优势。请大家把警徽票投给我，让我们一起赢下这局。",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "player_1",
+    "confidence": 1.0,
+    "tags": [
+      "speech",
+      "discussion"
+    ],
+    "item_id": "9f384428-8faa-4618-99de-5f77682afe4b"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'action_requested', 'actor': 'player_3', 'role': 'witch', 'request_kind': 'sheriff_campaign_speak', 'allowed_actions': ['speak'], 'alive_players': ['player_0', 'player_1', 'player_2', 'player_3', 'player_4', 'player_5'], 'available_targets': [], 'last_guard_target': None, 'sheriff_candidates': ['player_1', 'player_3'], 'subphase': 'sheriff_campaign'}",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "f0f62c7f-784d-47a8-826c-c4ba1db15211"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'speaker': 'player_3', 'content': '我是女巫，昨晚我自己被刀，选择自救。所以场上现在六人存活。player_1跳预言家查杀player_0，这个信息我记下了。我竞选警长是想用女巫身份帮好人阵营稳住节奏，如果拿到警徽，我会根据后续发言和投票来验证player_1的预言家身份。请大家把警徽票投给我。'}",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "c2319d7b-e775-47fa-afe5-e0f9501d8a08"
+  },
+  {
+    "memory_type": "speech",
+    "content": "我是女巫，昨晚我自己被刀，选择自救。所以场上现在六人存活。player_1跳预言家查杀player_0，这个信息我记下了。我竞选警长是想用女巫身份帮好人阵营稳住节奏，如果拿到警徽，我会根据后续发言和投票来验证player_1的预言家身份。请大家把警徽票投给我。",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "player_3",
+    "confidence": 1.0,
+    "tags": [
+      "speech",
+      "discussion"
+    ],
+    "item_id": "e052dd7c-9f9f-4826-b0e4-e47423fa0bff"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'voter': 'player_0', 'target': 'player_3'}",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "21908815-a2f8-4b95-80c8-46aab70e79ef"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'voter': 'player_2', 'target': 'player_1'}",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "9880c9c5-03de-4964-8fae-efead0c6dbb9"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'voter': 'player_4', 'target': 'player_3'}",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "5de39ede-bee2-4286-9723-fca36ef75d64"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'voter': 'player_5', 'target': 'player_1'}",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "cdb38f75-f9fb-4912-a4da-c9dc2d6c72c6"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'vote_counts': {'player_1': 2, 'player_3': 2}, 'candidates': ['player_1', 'player_3']}",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "41cc836c-b4a7-41fd-ae83-e0a8f7f51029"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'tied_candidates': ['player_1', 'player_3'], 'votes': 2}",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "5de2e529-fbb7-4a1f-9bf4-cee8b0e0eafa"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': '天亮了，昨夜是平安夜', 'deaths': []}",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "447ee21f-4757-4fa4-bf64-1218f375dc16"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'badge_holder': None, 'speaking_order': ['player_0', 'player_1', 'player_2', 'player_3', 'player_4', 'player_5']}",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "325dd90b-e91c-46e0-a4c6-aa65cf704565"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'speaker': 'player_0', 'content': 'player_1查杀我，我只能说我是好人，这个查杀我接得莫名其妙。如果他是真预言家，第一晚查验一个没有发言的玩家就急着查杀，这个打法太激进了。而且我注意到player_2和player_5在警长投票时都投给了player_1，站边速度很快，我反而觉得他们三个有问题。player_3的女巫身份目前看起来比较可信，我倾向于先观察后续发言再做判断。'}",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "9b9fcb26-0b63-4728-9c91-8559ec00e68f"
+  },
+  {
+    "memory_type": "speech",
+    "content": "player_1查杀我，我只能说我是好人，这个查杀我接得莫名其妙。如果他是真预言家，第一晚查验一个没有发言的玩家就急着查杀，这个打法太激进了。而且我注意到player_2和player_5在警长投票时都投给了player_1，站边速度很快，我反而觉得他们三个有问题。player_3的女巫身份目前看起来比较可信，我倾向于先观察后续发言再做判断。",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "player_0",
+    "confidence": 1.0,
+    "tags": [
+      "speech",
+      "discussion"
+    ],
+    "item_id": "807be72c-c8b8-475e-9279-cae78f077c12"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'speaker': 'player_1', 'content': \"我再次确认，我是真预言家，player_0就是狼人。他刚才的发言完全是狼人视角的辩解——先质疑我的查验方式，再把矛头指向投给我的player_2和player_5，这是典型的转移视线。第一晚查到狼人直接报出来，这是预言家的正常打法，不存在什么'激进'。player_3的女巫身份可信，因为她说的自救和昨晚平安夜吻合。请大家今天把票投给player_0，先出这只狼。\"}",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "daa799ce-0369-4a3e-b473-f07904493139"
+  },
+  {
+    "memory_type": "speech",
+    "content": "我再次确认，我是真预言家，player_0就是狼人。他刚才的发言完全是狼人视角的辩解——先质疑我的查验方式，再把矛头指向投给我的player_2和player_5，这是典型的转移视线。第一晚查到狼人直接报出来，这是预言家的正常打法，不存在什么'激进'。player_3的女巫身份可信，因为她说的自救和昨晚平安夜吻合。请大家今天把票投给player_0，先出这只狼。",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "player_1",
+    "confidence": 1.0,
+    "tags": [
+      "speech",
+      "discussion"
+    ],
+    "item_id": "1739a39d-9310-47a5-8118-e6aa0a31f355"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'speaker': 'player_2', 'content': '我来说说我的想法。player_1第一晚就查到狼人，这个信息确实很关键，但我有点疑惑的是，第一晚没有任何发言基础，预言家为什么会选择查验player_0呢？这个选择逻辑我希望player_1能再解释一下。player_3的女巫身份目前看起来和昨晚平安夜吻合，这个我先信着。至于警长投票我投给player_1，是因为当时觉得预言家身份需要警徽带队，但现在看player_0的发言也不是完全没有道理，我倾向于今天先听更多发言再做判断。'}",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "ba7a631d-68f6-4b88-8f92-16dc80a1b2c6"
+  },
+  {
+    "memory_type": "speech",
+    "content": "我来说说我的想法。player_1第一晚就查到狼人，这个信息确实很关键，但我有点疑惑的是，第一晚没有任何发言基础，预言家为什么会选择查验player_0呢？这个选择逻辑我希望player_1能再解释一下。player_3的女巫身份目前看起来和昨晚平安夜吻合，这个我先信着。至于警长投票我投给player_1，是因为当时觉得预言家身份需要警徽带队，但现在看player_0的发言也不是完全没有道理，我倾向于今天先听更多发言再做判断。",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "player_2",
+    "confidence": 1.0,
+    "tags": [
+      "speech",
+      "discussion"
+    ],
+    "item_id": "ec1b3f80-faae-4b63-bf6d-9c9cb632e84d"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'action_requested', 'actor': 'player_3', 'role': 'witch', 'request_kind': 'day_speak', 'allowed_actions': ['speak'], 'alive_players': ['player_0', 'player_1', 'player_2', 'player_3', 'player_4', 'player_5'], 'available_targets': [], 'last_guard_target': None, 'sheriff_candidates': ['player_1', 'player_3'], 'subphase': 'discussion'}",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "463e8e26-1212-4477-8aa7-9649f4cb222e"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'speaker': 'player_3', 'content': '我先确认一下：我是女巫，昨晚自救，解药已用。player_2提出的问题很关键——第一晚没有任何信息基础，player_1选择验player_0的逻辑确实需要解释。不过player_0被查杀后没有投给player_1而是投给我，这个行为我也有点困惑。player_2和player_5在警长投票时快速站边player_1，我希望听到player_5的发言，解释一下为什么这么快相信player_1。'}",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "37a3d219-987f-4eda-8a2c-03bb81deb6b1"
+  },
+  {
+    "memory_type": "speech",
+    "content": "我先确认一下：我是女巫，昨晚自救，解药已用。player_2提出的问题很关键——第一晚没有任何信息基础，player_1选择验player_0的逻辑确实需要解释。不过player_0被查杀后没有投给player_1而是投给我，这个行为我也有点困惑。player_2和player_5在警长投票时快速站边player_1，我希望听到player_5的发言，解释一下为什么这么快相信player_1。",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "player_3",
+    "confidence": 1.0,
+    "tags": [
+      "speech",
+      "discussion"
+    ],
+    "item_id": "e94a391d-6979-4ee9-80ff-a77a8578ddaf"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'speaker': 'player_4', 'content': '我来说说我的看法。警长投票时我投给了player_3，因为她的女巫身份和昨晚平安夜完全吻合，可信度很高。player_1首夜验player_0的逻辑确实需要解释——没有任何发言基础的情况下，为什么偏偏选player_0？player_2和player_5在警长投票时快速站边player_1，这点我也有点在意。不过player_0被查杀后没有投给player_1而是投给player_3，这个行为也值得思考。我希望能先听到player_5的发言，解释一下为什么这么快相信player_1，再做判断。'}",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "a984e3fb-7ed9-433a-995b-c29296e1b6a5"
+  },
+  {
+    "memory_type": "speech",
+    "content": "我来说说我的看法。警长投票时我投给了player_3，因为她的女巫身份和昨晚平安夜完全吻合，可信度很高。player_1首夜验player_0的逻辑确实需要解释——没有任何发言基础的情况下，为什么偏偏选player_0？player_2和player_5在警长投票时快速站边player_1，这点我也有点在意。不过player_0被查杀后没有投给player_1而是投给player_3，这个行为也值得思考。我希望能先听到player_5的发言，解释一下为什么这么快相信player_1，再做判断。",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "player_4",
+    "confidence": 1.0,
+    "tags": [
+      "speech",
+      "discussion"
+    ],
+    "item_id": "bc0883ad-61ab-422b-a7ed-a512da97ccdc"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'speaker': 'player_5', 'content': '我会继续结合前面的发言、投票和夜间结果盘逻辑。现在场上还能继续回应的人有player_0、player_1、player_2、player_3、player_4，我更想听他们怎么解释关键轮次的站边和票型。'}",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "18555091-dcc6-4346-8f0e-a004665fa25b"
+  },
+  {
+    "memory_type": "speech",
+    "content": "我会继续结合前面的发言、投票和夜间结果盘逻辑。现在场上还能继续回应的人有player_0、player_1、player_2、player_3、player_4，我更想听他们怎么解释关键轮次的站边和票型。",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "player_5",
+    "confidence": 1.0,
+    "tags": [
+      "speech",
+      "discussion"
+    ],
+    "item_id": "d6fbebd2-21be-4538-99ce-a24fc71a6547"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'player_0 voted for player_1', 'voter': 'player_0', 'target': 'player_1'}",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "82c17c57-a5dd-47dd-9cec-70a40864ab6c"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'player_1 voted for player_0', 'voter': 'player_1', 'target': 'player_0'}",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "58ebb3d8-c835-47f0-b0ab-468682ffc72b"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'player_2 voted for player_0', 'voter': 'player_2', 'target': 'player_0'}",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "04ef5f99-ea12-46bf-bdcb-a8e77eb50035"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'action_requested', 'actor': 'player_3', 'role': 'witch', 'request_kind': 'day_vote', 'allowed_actions': ['vote'], 'alive_players': ['player_0', 'player_1', 'player_2', 'player_3', 'player_4', 'player_5'], 'available_targets': ['player_0', 'player_1', 'player_2', 'player_4', 'player_5'], 'last_guard_target': None, 'sheriff_candidates': ['player_1', 'player_3'], 'subphase': 'voting'}",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "7f80d506-508c-4484-aeb3-bea21e5097d6"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'player_3 voted for player_1', 'voter': 'player_3', 'target': 'player_1'}",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "ee2b0bad-252a-488d-b763-756c6d1a0cb7"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'player_4 voted for player_1', 'voter': 'player_4', 'target': 'player_1'}",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "edeea528-1f75-49be-94cc-6556de73b1be"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'player_5 voted for player_1', 'voter': 'player_5', 'target': 'player_1'}",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "ac7590b5-d74d-46f1-bd42-3f33d78d00e2"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Starting phase processing for day_1', 'current_phase': 'day_1', 'alive_players': ['player_0', 'player_2', 'player_3', 'player_4', 'player_5']}",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "aee17596-91c5-40db-88c2-8c4c7eea1b25"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': \"Vote counts: {'player_0': 2, 'player_1': 4, 'player_2': 0, 'player_3': 0, 'player_4': 0, 'player_5': 0}\", 'vote_counts': {'player_0': 2, 'player_1': 4, 'player_2': 0, 'player_3': 0, 'player_4': 0, 'player_5': 0}}",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "b172ca94-64c3-42fb-b9e3-0b0d38cdb7aa"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'player_1 was eliminated by vote', 'eliminated_player': 'player_1', 'reason': 'eliminated by vote'}",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "639f5b63-168c-4b1e-91fe-0b4eafdf015a"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'speakers': ['player_1'], 'reason': 'vote_elimination'}",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "26d31c99-768f-4d61-9d18-56356700e23c"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'speaker': 'player_1', 'reason': 'vote_elimination'}",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "fbfadd17-9934-4826-a3a4-895de05efccf"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'speaker': 'player_1', 'content': '我是预言家，遗言留在这里。第一晚查验player_0，铁狼。现在我被投出局，请大家记住这个信息。投票分析：player_3、player_4、player_5联手投死我，其中player_3警长竞选时自称女巫自救，但投票时却投给我而不是查杀狼人player_0，这个行为非常可疑。player_2是全场唯一跟我一起投player_0的，应该是好人。剩下player_4和player_5需要仔细分辨。我的验人结果不会错，player_0就是狼人，请好人阵营下一轮务必把player_0投出去。'}",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "3fb1837e-750b-48e6-b45f-98df1f0a3371"
+  },
+  {
+    "memory_type": "speech",
+    "content": "我是预言家，遗言留在这里。第一晚查验player_0，铁狼。现在我被投出局，请大家记住这个信息。投票分析：player_3、player_4、player_5联手投死我，其中player_3警长竞选时自称女巫自救，但投票时却投给我而不是查杀狼人player_0，这个行为非常可疑。player_2是全场唯一跟我一起投player_0的，应该是好人。剩下player_4和player_5需要仔细分辨。我的验人结果不会错，player_0就是狼人，请好人阵营下一轮务必把player_0投出去。",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "player_1",
+    "confidence": 1.0,
+    "tags": [
+      "speech",
+      "discussion"
+    ],
+    "item_id": "6bb57735-e2e9-48ef-9202-bb7485de4e68"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Starting phase processing for day_1', 'current_phase': 'day_1', 'alive_players': ['player_0', 'player_2', 'player_3', 'player_4', 'player_5']}",
+    "game_id": "game_2_103819",
+    "phase": "day_1",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "241dc9c0-942e-47ef-856c-28036db1a773"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Phase advanced to night_2', 'new_phase': 'night_2', 'previous_phase': 'day_1', 'subphase': 'guard'}",
+    "game_id": "game_2_103819",
+    "phase": "night_2",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "cfaff600-8e46-4ae9-bc55-34f77271c267"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Completed phase processing for day_1, now in night_2', 'current_phase': 'night_2', 'previous_phase': 'day_1', 'alive_players': ['player_0', 'player_2', 'player_3', 'player_4', 'player_5']}",
+    "game_id": "game_2_103819",
+    "phase": "night_2",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "5779a6f7-236f-4ccb-a5ec-4119d60fb170"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'witch_night_info', 'attacked_player': 'player_3'}",
+    "game_id": "game_2_103819",
+    "phase": "night_2",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "d2e962f9-8fce-44b7-a2c7-e6cc1dadc726"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'action_requested', 'actor': 'player_3', 'role': 'witch', 'request_kind': 'night_action', 'allowed_actions': ['poison', 'skip'], 'alive_players': ['player_0', 'player_2', 'player_3', 'player_4', 'player_5'], 'available_targets': ['player_0', 'player_2', 'player_3', 'player_4', 'player_5'], 'last_guard_target': None, 'sheriff_candidates': ['player_1', 'player_3'], 'subphase': 'witch'}",
+    "game_id": "game_2_103819",
+    "phase": "night_2",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "d254119b-30fe-4454-9ac8-fda368017833"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Starting phase processing for night_2', 'current_phase': 'night_2', 'alive_players': ['player_2', 'player_4', 'player_5']}",
+    "game_id": "game_2_103819",
+    "phase": "night_2",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "47face72-e93f-4eea-b213-2ae42738d24e"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Phase advanced to day_2', 'new_phase': 'day_2', 'previous_phase': 'night_2', 'subphase': 'daybreak'}",
+    "game_id": "game_2_103819",
+    "phase": "day_2",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "e5472f40-0706-49d1-90bb-1fbfba99adb2"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Completed phase processing for night_2, now in day_2', 'current_phase': 'day_2', 'previous_phase': 'night_2', 'alive_players': ['player_2', 'player_4', 'player_5']}",
+    "game_id": "game_2_103819",
+    "phase": "day_2",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "71b3ef76-a3bd-4f0c-a730-5ba7d3b837f3"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': \"天亮了，昨夜死亡玩家: ['player_0', 'player_3']\", 'deaths': ['player_0', 'player_3']}",
+    "game_id": "game_2_103819",
+    "phase": "day_2",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "fcf32c1e-3f72-4408-9890-a2ae551ac196"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'badge_holder': None, 'speaking_order': ['player_2', 'player_4', 'player_5']}",
+    "game_id": "game_2_103819",
+    "phase": "day_2",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "a211261f-539a-4125-b14b-61c5116d0adf"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'speaker': 'player_2', 'content': '昨晚双死，player_1是预言家，player_0确实是狼人，player_3是女巫也走了。现在场上只剩我和player_4、player_5，说明还有一只狼。我重新盘了一下票型：警长投票时player_4投给player_3，但日票时却转投player_1，亲手把预言家投出局。player_5也是类似，警长票站player_1，日票却反水投死预言家。这两个人谁更可疑？我觉得player_4的转变更值得质疑，警长票时player_3自称女巫，他信了，但日票时却没站边查杀狼人的预言家，反而帮狼人把预言家投出局，这个逻辑我需要他解释一下。'}",
+    "game_id": "game_2_103819",
+    "phase": "day_2",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "a9f46cb5-39ec-4640-8ce9-fb59f0161d74"
+  },
+  {
+    "memory_type": "speech",
+    "content": "昨晚双死，player_1是预言家，player_0确实是狼人，player_3是女巫也走了。现在场上只剩我和player_4、player_5，说明还有一只狼。我重新盘了一下票型：警长投票时player_4投给player_3，但日票时却转投player_1，亲手把预言家投出局。player_5也是类似，警长票站player_1，日票却反水投死预言家。这两个人谁更可疑？我觉得player_4的转变更值得质疑，警长票时player_3自称女巫，他信了，但日票时却没站边查杀狼人的预言家，反而帮狼人把预言家投出局，这个逻辑我需要他解释一下。",
+    "game_id": "game_2_103819",
+    "phase": "day_2",
+    "role": "player_2",
+    "confidence": 1.0,
+    "tags": [
+      "speech",
+      "discussion"
+    ],
+    "item_id": "7aa5415e-1550-449a-8284-3db80ab2385b"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'speaker': 'player_4', 'content': 'player_2你的说法有问题。首先，player_5警长票和日票都投给player_1，根本没有反水，你歪曲事实是在干什么？其次，你自己警长票投player_1，日票却转投player_0，这才是真正的转变。当时player_1查杀player_0是狼，你却投了被查杀的人，现在又来指责我？我承认我日票投死预言家是判断失误，但你的票型和歪曲事实的行为更可疑。'}",
+    "game_id": "game_2_103819",
+    "phase": "day_2",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "42158e52-8e01-4839-828e-a27d3b1d1be9"
+  },
+  {
+    "memory_type": "speech",
+    "content": "player_2你的说法有问题。首先，player_5警长票和日票都投给player_1，根本没有反水，你歪曲事实是在干什么？其次，你自己警长票投player_1，日票却转投player_0，这才是真正的转变。当时player_1查杀player_0是狼，你却投了被查杀的人，现在又来指责我？我承认我日票投死预言家是判断失误，但你的票型和歪曲事实的行为更可疑。",
+    "game_id": "game_2_103819",
+    "phase": "day_2",
+    "role": "player_4",
+    "confidence": 1.0,
+    "tags": [
+      "speech",
+      "discussion"
+    ],
+    "item_id": "6c30e00a-e7f7-47c7-a59b-d9570d0e62c7"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'speaker': 'player_5', 'content': '我必须先澄清一个关键事实：我的警长票和日票都投给了player_1，两轮完全一致，根本没有反水。player_2说我警长票站player_1、日票反水，这是在公然歪曲票型记录。反倒是player_2你自己，警长票投player_1，日票转投player_0，这才是真正的转变。你现在造谣带节奏、试图把水搅浑，我高度怀疑你就是最后一只狼。'}",
+    "game_id": "game_2_103819",
+    "phase": "day_2",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "16e1b8b5-e6b6-40da-be07-7c020800ad76"
+  },
+  {
+    "memory_type": "speech",
+    "content": "我必须先澄清一个关键事实：我的警长票和日票都投给了player_1，两轮完全一致，根本没有反水。player_2说我警长票站player_1、日票反水，这是在公然歪曲票型记录。反倒是player_2你自己，警长票投player_1，日票转投player_0，这才是真正的转变。你现在造谣带节奏、试图把水搅浑，我高度怀疑你就是最后一只狼。",
+    "game_id": "game_2_103819",
+    "phase": "day_2",
+    "role": "player_5",
+    "confidence": 1.0,
+    "tags": [
+      "speech",
+      "discussion"
+    ],
+    "item_id": "09501003-cd7d-4e26-b473-c217bbfa797f"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'player_2 voted for player_4', 'voter': 'player_2', 'target': 'player_4'}",
+    "game_id": "game_2_103819",
+    "phase": "day_2",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "a8e1d7f0-25bf-4b47-99e1-e1b17871eebd"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'player_4 voted for player_2', 'voter': 'player_4', 'target': 'player_2'}",
+    "game_id": "game_2_103819",
+    "phase": "day_2",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "451c02c7-69ab-4eb0-898f-df05f002f586"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'player_5 voted for player_2', 'voter': 'player_5', 'target': 'player_2'}",
+    "game_id": "game_2_103819",
+    "phase": "day_2",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "3e276bf6-5f61-4aac-9d4d-d2686072ee24"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Starting phase processing for day_2', 'current_phase': 'day_2', 'alive_players': ['player_4', 'player_5']}",
+    "game_id": "game_2_103819",
+    "phase": "day_2",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "d411c492-7164-4c8a-91df-175906ef3a0d"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': \"Vote counts: {'player_2': 2, 'player_4': 1, 'player_5': 0}\", 'vote_counts': {'player_2': 2, 'player_4': 1, 'player_5': 0}}",
+    "game_id": "game_2_103819",
+    "phase": "day_2",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "b31e4466-a5e0-4d95-8dc6-f1c1796bc6bc"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'player_2 was eliminated by vote', 'eliminated_player': 'player_2', 'reason': 'eliminated by vote'}",
+    "game_id": "game_2_103819",
+    "phase": "day_2",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "f75c33f9-c9b4-4834-b8bb-c500af07a570"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'speakers': ['player_2'], 'reason': 'vote_elimination'}",
+    "game_id": "game_2_103819",
+    "phase": "day_2",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "1324e4bb-6715-4922-9d9e-87c503f88fc9"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'speaker': 'player_2', 'reason': 'vote_elimination'}",
+    "game_id": "game_2_103819",
+    "phase": "day_2",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "c980dd74-bd64-42a2-b2c1-2733a4f8245a"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'speaker': 'player_2', 'content': '好吧，我承认我之前对player_5票型的描述确实有误，这一点我道歉。但我仍然觉得整局游戏的走向很奇怪——player_1预言家被投出局，player_0和player_3双死，现在我也走了。我确实判断失误了，投了player_0而不是站边预言家。但我想说的是，player_4你警长票投给player_3、日票却投给player_1，这个转变确实存在。我也许是好人站错边了，但你们两个之间谁更有问题，留给场上判断吧。'}",
+    "game_id": "game_2_103819",
+    "phase": "day_2",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "fa0e542f-40fb-4cb8-b506-b7b25f383e43"
+  },
+  {
+    "memory_type": "speech",
+    "content": "好吧，我承认我之前对player_5票型的描述确实有误，这一点我道歉。但我仍然觉得整局游戏的走向很奇怪——player_1预言家被投出局，player_0和player_3双死，现在我也走了。我确实判断失误了，投了player_0而不是站边预言家。但我想说的是，player_4你警长票投给player_3、日票却投给player_1，这个转变确实存在。我也许是好人站错边了，但你们两个之间谁更有问题，留给场上判断吧。",
+    "game_id": "game_2_103819",
+    "phase": "day_2",
+    "role": "player_2",
+    "confidence": 1.0,
+    "tags": [
+      "speech",
+      "discussion"
+    ],
+    "item_id": "10fe44a1-6aea-4d78-b9f9-26c21bb0178f"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Starting phase processing for day_2', 'current_phase': 'day_2', 'alive_players': ['player_4', 'player_5']}",
+    "game_id": "game_2_103819",
+    "phase": "day_2",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "0afe7bda-e1f1-43d3-9a2f-43ccd68070d6"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Entered POST_GAME and forced finalization', 'previous_phase': 'day_2', 'resolution_reason': 'standard_victory', 'alive_players': ['player_4', 'player_5']}",
+    "game_id": "game_2_103819",
+    "phase": "post_game",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "becaf86f-ac6e-4ab5-91e6-15d82c03d19f"
+  },
+  {
+    "memory_type": "factual",
+    "content": "观察到事件: {'message': 'Game ended. Winner: villagers', 'winner': 'villagers', 'resolution_reason': 'standard_victory', 'final_alive_players': ['player_4', 'player_5']}",
+    "game_id": "game_2_103819",
+    "phase": "post_game",
+    "role": "witch",
+    "confidence": 1.0,
+    "tags": [
+      "fact"
+    ],
+    "item_id": "cf3b34b3-b4d6-485d-842d-6baeb58a906e"
+  }
+]

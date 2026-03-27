@@ -1,0 +1,6 @@
+{
+  "action_type": "kill",
+  "target": "player_3",
+  "reasoning_summary": "player_3是场上唯一明牌神职（女巫），已用解药但仍有毒药威胁。她投票投死预言家player_1，遗言还专门点名她可疑，杀她既能除掉威胁又能利用遗言制造混乱。player_2虽然投我但player_1遗言说他是好人，留着他可以继续分化好人阵营。",
+  "public_speech": ""
+}

@@ -1,0 +1,8 @@
+```json
+{
+  "action_type": "vote",
+  "target": "player_4",
+  "reasoning_summary": "场上已有四人投player_4，票型已定。作为狼人，跟随大票型投票可以隐藏身份，同时player_4是好人阵营，出局对狼人有利。保持与多数一致避免被怀疑。",
+  "public_speech": ""
+}
+```

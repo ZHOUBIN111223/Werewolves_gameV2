@@ -1,0 +1,8 @@
+```json
+{
+  "action_type": "vote",
+  "target": "player_0",
+  "reasoning_summary": "作为狼人，player_1声称预言家查杀player_0，如果player_1是真预言家，player_0确实是狼队友。但此时投player_0可以与多数玩家站在一起，避免暴露身份。player_0已经投了player_1，票型对立明显，我投player_0符合我之前发言中保持中立观察的立场，不会引起怀疑。",
+  "public_speech": ""
+}
+```

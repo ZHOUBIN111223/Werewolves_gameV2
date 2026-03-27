@@ -1,0 +1,8 @@
+```json
+{
+  "action_type": "poison",
+  "target": "player_0",
+  "reasoning_summary": "我是女巫player_3，第一晚被刀自救，解药已用。第二晚又被刀，无解药可用。player_1作为预言家查杀player_0是狼人，虽然player_1被投出局，但他的验人结果值得信任。player_0被查杀后的发言和投票行为都很可疑——警长竞选时投给我而非对抗查杀，最后投票时才投给player_1。综合判断player_0是狼人的可能性很高。我今晚必死（除非守卫救我），在临死前用毒药带走最可疑的狼人是合理选择。",
+  "public_speech": ""
+}
+```

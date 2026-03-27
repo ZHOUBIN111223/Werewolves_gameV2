@@ -1,0 +1,8 @@
+```json
+{
+  "action_type": "kill",
+  "target": "player_0",
+  "reasoning_summary": "第一夜没有信息，随机选择player_0作为击杀目标，后续根据白天发言调整策略",
+  "public_speech": ""
+}
+```

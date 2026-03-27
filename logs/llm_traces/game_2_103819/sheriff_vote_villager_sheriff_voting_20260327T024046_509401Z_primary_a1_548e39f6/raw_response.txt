@@ -1,0 +1,8 @@
+```json
+{
+  "action_type": "vote",
+  "target": "player_3",
+  "reasoning_summary": "player_3声称女巫自救，这个信息可验证。如果player_1是真预言家查杀player_0，player_0作为狼人却投票给女巫候选人player_3有些反常。player_3表示会验证player_1身份，态度谨慎。作为村民，我倾向于先支持女巫稳住局势，后续再验证预言家身份。",
+  "public_speech": ""
+}
+```

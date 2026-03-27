@@ -1,0 +1,8 @@
+```json
+{
+  "action_type": "speak",
+  "target": "",
+  "reasoning_summary": "我是女巫，首夜救了被刀的player_0，银水信息证明player_0大概率是真预言家。需要公开这个信息帮助好人阵营确认站边方向。",
+  "public_speech": "我是女巫，昨晚player_0被刀，我用解药救了，所以是平安夜。这说明player_0大概率是真预言家，狼人不会刀自己队友。我站边player_0，player_1和player_4对首夜验猎人的质疑有一定道理，但银水信息更能说明问题。"
+}
+```

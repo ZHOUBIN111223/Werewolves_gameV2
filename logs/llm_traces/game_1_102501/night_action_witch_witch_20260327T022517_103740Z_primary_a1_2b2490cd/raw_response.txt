@@ -1,0 +1,8 @@
+```json
+{
+  "action_type": "heal",
+  "target": "player_0",
+  "reasoning_summary": "首夜狼人刀player_0，作为女巫首夜救人是常规打法。救人可以保住一个潜在的好人，同时获得银水信息，白天可以适时分享帮助好人阵营缩小狼坑。毒药首夜使用风险太大，应保留待有信息后再用。",
+  "public_speech": ""
+}
+```

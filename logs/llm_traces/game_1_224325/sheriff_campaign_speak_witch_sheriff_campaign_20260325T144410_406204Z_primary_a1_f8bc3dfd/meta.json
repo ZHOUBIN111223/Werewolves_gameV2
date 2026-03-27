@@ -1,0 +1,13 @@
+{
+  "timestamp_utc": "20260325T144410_406204Z",
+  "provider": "primary",
+  "attempt": 1,
+  "prompt_type": "action",
+  "game_id": "game_1_224325",
+  "role": "witch",
+  "phase": "day_1",
+  "request_kind": "sheriff_campaign_speak",
+  "current_subphase": "sheriff_campaign",
+  "model": "openai/glm-5",
+  "api_base": "https://coding.dashscope.aliyuncs.com/v1"
+}

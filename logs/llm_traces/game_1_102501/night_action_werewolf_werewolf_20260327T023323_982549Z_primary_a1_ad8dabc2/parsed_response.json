@@ -1,0 +1,6 @@
+{
+  "action_type": "kill",
+  "target": "player_2",
+  "reasoning_summary": "player_2是女巫，首夜已用解药救player_0，现在无法自救。守卫更可能保护银水预言家player_0，而非女巫。杀掉女巫可以消除毒药威胁，且player_2已暴露身份是明确的威胁。player_3是猎人不能杀，杀了他可能被反杀。综合来看，player_2是最佳目标。",
+  "public_speech": ""
+}

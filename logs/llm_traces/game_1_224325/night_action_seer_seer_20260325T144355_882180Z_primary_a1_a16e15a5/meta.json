@@ -1,0 +1,13 @@
+{
+  "timestamp_utc": "20260325T144355_882180Z",
+  "provider": "primary",
+  "attempt": 1,
+  "prompt_type": "action",
+  "game_id": "game_1_224325",
+  "role": "seer",
+  "phase": "night_1",
+  "request_kind": "night_action",
+  "current_subphase": "seer",
+  "model": "openai/glm-5",
+  "api_base": "https://coding.dashscope.aliyuncs.com/v1"
+}
