@@ -7,6 +7,7 @@ from typing import Any, Dict
 
 
 def _looks_like_valid_api_key(value: str) -> bool:
+    """粗略判断 API Key 是否“看起来”有效（避免明显的默认/占位 key）。"""
     value = str(value or "").strip()
     return bool(value) and not (value.startswith("sk-") and len(value) < 20)
 
@@ -14,7 +15,7 @@ def _looks_like_valid_api_key(value: str) -> bool:
 class APIConfig:
     """API-level defaults."""
 
-    DEFAULT_API_PROVIDER = os.getenv("DEFAULT_API_PROVIDER", "openai")
+    DEFAULT_API_PROVIDER = os.getenv("DEFAULT_API_PROVIDER", "bailian")
 
     CUSTOM_LLM_ENDPOINT = os.getenv(
         "CUSTOM_LLM_ENDPOINT",
@@ -24,18 +25,23 @@ class APIConfig:
         "CUSTOM_LLM_API_KEY",
         os.getenv("LITELLM_API_KEY", os.getenv("CUSTOM_API_KEY", "")),
     )
-    DEFAULT_MODEL = os.getenv("DEFAULT_MODEL", "gpt-4o-mini")
+    DEFAULT_MODEL = os.getenv("DEFAULT_MODEL", "glm-5")
 
     BAILIAN_ENDPOINT = os.getenv(
         "BAILIAN_ENDPOINT",
         "https://coding.dashscope.aliyuncs.com/v1",
     )
-    BAILIAN_API_KEY = os.getenv("BAILIAN_API_KEY", "")
+    BAILIAN_API_KEY = os.getenv(
+        "BAILIAN_API_KEY",
+        "",
+    )
     BAILIAN_DEFAULT_MODEL = os.getenv("BAILIAN_DEFAULT_MODEL", "glm-5")
 
     API_TIMEOUT = int(os.getenv("API_TIMEOUT", "60"))
     MAX_RETRIES = int(os.getenv("MAX_RETRIES", "3"))
     MAX_TOKENS = int(os.getenv("MAX_TOKENS", "1000"))
+    REFLECTION_API_TIMEOUT = int(os.getenv("REFLECTION_API_TIMEOUT", "20"))
+    REFLECTION_MAX_RETRIES = int(os.getenv("REFLECTION_MAX_RETRIES", "1"))
 
 
 class GameConfig:
@@ -73,6 +79,10 @@ class AppConfig:
     STORE_PATH = os.getenv("STORE_PATH", "./store_data")
     LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
     LOG_PATH = os.getenv("LOG_PATH", "./logs")
+    REFLECTION_MAX_VISIBLE_EVENTS = int(os.getenv("REFLECTION_MAX_VISIBLE_EVENTS", "120"))
+    REFLECTION_MAX_MEMORIES = int(os.getenv("REFLECTION_MAX_MEMORIES", "60"))
+    REFLECTION_MAX_STRATEGY_RULES = int(os.getenv("REFLECTION_MAX_STRATEGY_RULES", "8"))
+    POST_GAME_TOTAL_TIMEOUT_SECONDS = int(os.getenv("POST_GAME_TOTAL_TIMEOUT_SECONDS", "180"))
 
 
 def get_config_for_provider(provider: str) -> Dict[str, Any]:
@@ -94,13 +104,13 @@ def get_config_for_provider(provider: str) -> Dict[str, Any]:
         "bailian": {
             "base_url": os.getenv(
                 "BAILIAN_ENDPOINT",
-                "https://coding.dashscope.aliyuncs.com/v1",
+                APIConfig.BAILIAN_ENDPOINT,
             ),
-            "api_key": os.getenv("BAILIAN_API_KEY", ""),
-            "default_model": os.getenv("BAILIAN_DEFAULT_MODEL", "glm-5"),
+            "api_key": os.getenv("BAILIAN_API_KEY", APIConfig.BAILIAN_API_KEY),
+            "default_model": os.getenv("BAILIAN_DEFAULT_MODEL", APIConfig.BAILIAN_DEFAULT_MODEL),
             "endpoint": os.getenv(
                 "BAILIAN_ENDPOINT",
-                "https://coding.dashscope.aliyuncs.com/v1",
+                APIConfig.BAILIAN_ENDPOINT,
             ),
         },
         "custom": {

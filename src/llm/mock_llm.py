@@ -8,6 +8,7 @@ class MockLLM:
     """根据 prompt 内容返回确定性结果。"""
 
     def __init__(self):
+        """初始化 MockLLM 的局内状态缓存。"""
         # 为每个游戏维护状态信息
         self.game_states = {}
 

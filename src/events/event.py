@@ -62,18 +62,21 @@ class EventBase(BaseModel):
 
     @field_validator('game_id')
     def validate_game_id(cls, v: str) -> str:
+        """校验 game_id 非空并去除首尾空白。"""
         if not v or not v.strip():
             raise ValueError('game_id 不能为空')
         return v.strip()
 
     @field_validator('visibility')
     def validate_visibility(cls, v: List[str]) -> List[str]:
+        """校验 visibility 为字符串列表。"""
         if not isinstance(v, list):
             raise ValueError('visibility 必须是字符串列表')
         return v
 
     @field_validator('payload')
     def validate_payload(cls, v: Dict[str, Any]) -> Dict[str, Any]:
+        """校验 payload 为字典结构。"""
         if not isinstance(v, dict):
             raise ValueError('payload 必须是字典')
         return v

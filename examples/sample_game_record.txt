@@ -1,7 +1,7 @@
 狼人杀对局记录
 ========================================
 游戏 ID：game_1_105026
-数据源：C:\Users\周彬\Desktop\agent\Werewolves_gameV2\store_data\global_events_test.db
+
 说明：本记录基于事件库自动导出，包含公开流程与复盘可见的夜间动作。
 
 对局摘要

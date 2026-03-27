@@ -1,3 +1,4 @@
+# 用于在容器环境中运行项目测试的镜像定义。
 FROM python:3.12-slim
 
 WORKDIR /app

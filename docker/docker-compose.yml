@@ -1,3 +1,4 @@
+# 使用 compose 一键构建并运行测试容器（便于 CI/本地复现）。
 services:
   werewolves-tests:
     build:

@@ -22,6 +22,7 @@ class SyncEventStoreWrapper:
     """同步事件存储包装器，使用 asyncio.run 来包装异步存储操作以实现向后兼容。"""
 
     def __init__(self, file_path: str | Path) -> None:
+        """创建同步包装器，并把旧 JSON 路径映射到新的 SQLite 数据库路径。"""
         # 将旧的 JSON 文件路径改为新的数据库路径
         db_path = Path(file_path).with_suffix('.db')
         self._async_store = BaseAsyncEventStore(db_path)
@@ -55,6 +56,7 @@ class GlobalEventStore(SyncEventStoreWrapper):
     """控制器专用的全局事件时间线存储的向后兼容包装器。内部使用异步存储。"""
 
     def __init__(self, file_path: str | Path) -> None:
+        """创建控制器全局事件存储（同步包装），并确保数据库已初始化。"""
         # 将旧的 JSON 文件路径改为新的数据库路径
         db_path = Path(file_path).with_suffix('.db')
         self._async_store = BaseGlobalEventStore(db_path)

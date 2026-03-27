@@ -16,11 +16,13 @@ from collections import defaultdict
 
 from src.controller.controller import Controller
 from src.events.event_bus import EventBus
+from src.metrics.evaluation import export_run_metrics
+from src.monitoring.decision_eval import evaluate_games, export_eval_scores
 from src.llm.real_llm import RealLLM  # 使用真实LLM
 from config import APIConfig, GameConfig, AppConfig, get_config_for_provider, validate_config
 
 
-def run_single_game(args, game_num, total_games, llm_service, global_store):
+def run_single_game(args, game_num, total_games, llm_service, global_store, evaluation_game_contexts):
     """
     运行单局游戏
 
@@ -35,6 +37,8 @@ def run_single_game(args, game_num, total_games, llm_service, global_store):
         dict: 游戏结果统计
     """
     print(f"\n========== 第 {game_num}/{total_games} 局游戏开始 ==========")
+
+    game_id = f"game_{game_num}"
 
     try:
         # 选择游戏配置
@@ -87,6 +91,7 @@ def run_single_game(args, game_num, total_games, llm_service, global_store):
         players = dict(zip(player_ids, roles))
 
         print(f"实际分配玩家: {players}")
+        evaluation_game_contexts[game_id] = dict(players)
 
         # 启动游戏
         print("游戏开始！")
@@ -107,6 +112,7 @@ def run_single_game(args, game_num, total_games, llm_service, global_store):
         import concurrent.futures
 
         def run_in_fresh_loop():
+            """在独立线程中创建并运行全新的事件循环，避免与外部 loop 冲突。"""
             return asyncio.run(run_game_with_async_controller(controller, game_id))
 
         # 在新线程中运行，确保有一个全新的事件循环
@@ -128,6 +134,9 @@ def run_single_game(args, game_num, total_games, llm_service, global_store):
             'winner': winner,
             'num_players': num_players,
             'roles': game_role_config,
+            'reflection_markdown': str(
+                controller.base_dir / "reflections" / f"{game_id}_agent_reflections.md"
+            ),
             'success': True,
             'error': None
         }
@@ -135,13 +144,13 @@ def run_single_game(args, game_num, total_games, llm_service, global_store):
         return result
     except KeyboardInterrupt:
         print(f"\n第 {game_num} 局游戏被用户中断。")
-        return {'game_id': f"game_{game_num}", 'success': False, 'error': 'KeyboardInterrupt'}
+        return {'game_id': game_id, 'success': False, 'error': 'KeyboardInterrupt'}
     except Exception as e:
         error_msg = str(e)
         print(f"第 {game_num} 局游戏运行过程中出现错误: {e}")
         import traceback
         traceback.print_exc()
-        return {'game_id': f"game_{game_num}", 'success': False, 'error': error_msg}
+        return {'game_id': game_id, 'success': False, 'error': error_msg}
 
 
 async def run_game_with_async_controller(controller, game_id):
@@ -153,6 +162,33 @@ async def run_game_with_async_controller(controller, game_id):
         game_id: 游戏ID
     """
     await controller.run_game_loop(game_id)
+
+
+def export_run_decision_eval(global_store, game_results, evaluation_game_contexts, output_path):
+    successful_eval_contexts = {
+        result['game_id']: evaluation_game_contexts[result['game_id']]
+        for result in game_results
+        if result.get('success') and result.get('game_id') in evaluation_game_contexts
+    }
+    eval_scores = asyncio.run(evaluate_games(global_store, successful_eval_contexts))
+    export_eval_scores(eval_scores, output_path)
+    return output_path
+
+
+def export_run_metric_artifacts(global_store, game_results, evaluation_game_contexts, output_dir, run_metadata):
+    successful_eval_contexts = {
+        result['game_id']: evaluation_game_contexts[result['game_id']]
+        for result in game_results
+        if result.get('success') and result.get('game_id') in evaluation_game_contexts
+    }
+    return asyncio.run(
+        export_run_metrics(
+            global_store,
+            successful_eval_contexts,
+            output_dir,
+            run_metadata=run_metadata,
+        )
+    )
 
 
 def main():
@@ -170,7 +206,7 @@ def main():
         parser.add_argument('--model', type=str, default=None, help='LLM模型名称')
         parser.add_argument('--timeout', type=int, default=APIConfig.API_TIMEOUT, help='请求超时时间')
         parser.add_argument('--max-retries', type=int, default=APIConfig.MAX_RETRIES, help='最大重试次数')
-        parser.add_argument('--games', type=int, default=1, help='运行游戏局数 (默认: 1)')
+        parser.add_argument('--games', type=int, default=3, help='运行游戏局数 (默认: 3)')
         parser.add_argument('--report', action='store_true', help='生成详细报告')
         parser.add_argument('--random-seed', type=int, default=None, help='随机种子，用于复现特定游戏场景 (可选)')
         parser.add_argument('--test-mode', action='store_true', help='使用 MockLLM 运行本地测试')
@@ -228,6 +264,7 @@ def main():
 
         # 存储所有游戏结果
         game_results = []
+        evaluation_game_contexts = {}
         start_time = datetime.now()
 
         print(f"开始连续运行 {args.games} 局游戏...")
@@ -235,8 +272,17 @@ def main():
         # 运行多局游戏
         for game_num in range(1, args.games + 1):
             try:
-                result = run_single_game(args, game_num, args.games, llm_service, global_store)
+                result = run_single_game(
+                    args,
+                    game_num,
+                    args.games,
+                    llm_service,
+                    global_store,
+                    evaluation_game_contexts,
+                )
                 game_results.append(result)
+                print(f"\n----- Game {game_num} Result -----")
+                print(json.dumps(result, ensure_ascii=False, indent=2))
 
                 if result['success']:
                     print(f"第 {game_num} 局游戏完成，获胜方: {result['winner']}")
@@ -265,6 +311,7 @@ def main():
 
         end_time = datetime.now()
         duration = end_time - start_time
+        run_timestamp = end_time.strftime('%Y%m%d_%H%M%S')
 
         print(f"\n========== 多局游戏运行完成 ==========")
         print(f"总耗时: {duration}")
@@ -275,7 +322,7 @@ def main():
             print(f"  {winner}: {count} 局")
 
         # 保存结果到文件
-        results_file = os.path.join("results", f"game_results_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json")
+        results_file = os.path.join("results", f"game_results_{run_timestamp}.json")
         results_path = Path(results_file)
         results_path.parent.mkdir(parents=True, exist_ok=True)  # 确保目录存在
 
@@ -294,6 +341,41 @@ def main():
             }, f, ensure_ascii=False, indent=2)
 
         print(f"\n详细结果已保存到: {results_file}")
+
+        eval_scores_path = Path("results") / f"eval_scores_{run_timestamp}.json"
+        try:
+            export_run_decision_eval(
+                global_store,
+                game_results,
+                evaluation_game_contexts,
+                eval_scores_path,
+            )
+            print(f"评估分数已保存到: {eval_scores_path}")
+        except Exception as eval_error:
+            print(f"导出评估分数时出现错误: {eval_error}")
+
+        metrics_output_dir = Path("outputs") / "metrics" / run_timestamp
+        try:
+            metrics_artifacts = export_run_metric_artifacts(
+                global_store,
+                game_results,
+                evaluation_game_contexts,
+                metrics_output_dir,
+                run_metadata={
+                    'run_timestamp': run_timestamp,
+                    'total_games': total_games,
+                    'successful_games': successful_games,
+                    'failed_games': failed_games,
+                    'duration_seconds': duration.total_seconds(),
+                    'start_time': start_time.isoformat(),
+                    'end_time': end_time.isoformat(),
+                    'winner_counts': dict(winner_counts)
+                },
+            )
+            print(f"Metrics artifacts saved to: {metrics_artifacts['output_dir']}")
+            print(f"Metrics summary file: {metrics_artifacts['summary_json']}")
+        except Exception as metrics_error:
+            print(f"Failed to export metrics artifacts: {metrics_error}")
 
         if args.report:
             print("\n======= 详细报告 =======")

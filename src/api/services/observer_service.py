@@ -1,3 +1,11 @@
+"""观战（Observer）服务实现。
+
+该服务是 API 层与事件存储之间的适配层：
+- 从 GlobalEventStore 中读取指定 game_id 的事件序列
+- 将内部事件模型（EventBase）转换成对外 DTO（EventDTO / MatchDTO 等）
+- 提供对局列表、快照、时间线与增量事件查询能力
+"""
+
 from __future__ import annotations
 
 from pathlib import Path
@@ -17,17 +25,23 @@ from src.events.event import EventBase
 
 
 class MatchNotFoundError(Exception):
-    pass
+    """请求的对局不存在（存储中无对应 game_id）。"""
 
 
 class ObserverService:
     """Read-only adapter from stored events to frontend-facing DTOs."""
 
     def __init__(self, db_path: str | Path | None = None) -> None:
+        """创建 ObserverService。
+
+        Args:
+            db_path: 事件数据库路径；为空时使用 `AppConfig.STORE_PATH/global_events.db`。
+        """
         base_path = Path(db_path) if db_path is not None else Path(AppConfig.STORE_PATH) / "global_events.db"
         self._store = GlobalEventStore(base_path)
 
     async def list_matches(self) -> MatchListResponse:
+        """列出存储中的所有对局（按最后事件时间近似排序）。"""
         items: List[MatchListItem] = []
         for game_id in await self._store.list_game_ids():
             events = await self._store.get_events_by_game_id(game_id)
@@ -46,6 +60,7 @@ class ObserverService:
         return MatchListResponse(items=items)
 
     async def get_match_snapshot(self, match_id: str, recent_limit: int = 20) -> MatchSnapshotResponse:
+        """读取对局快照（全量状态 + 最近 N 条事件）。"""
         events = await self._store.get_events_by_game_id(match_id)
         if not events:
             raise MatchNotFoundError(match_id)
@@ -56,12 +71,19 @@ class ObserverService:
         return MatchSnapshotResponse(match=match, players=players, recent_events=recent_events)
 
     async def get_timeline(self, match_id: str) -> List[EventDTO]:
+        """返回对局完整事件时间线（前端通常用于回放/调试）。"""
         events = await self._store.get_events_by_game_id(match_id)
         if not events:
             raise MatchNotFoundError(match_id)
         return [self._to_event_dto(event) for event in events]
 
     async def get_events_after(self, match_id: str, after_seq: int, limit: int = 100) -> EventListResponse:
+        """返回对局在给定序号之后的增量事件。
+
+        说明：
+        - after_seq 对应事件存储里的 timestamp（单调递增），因此可用于客户端轮询增量。
+        - limit+1 用于探测是否还有更多数据（has_more）。
+        """
         events = await self._store.get_events_after_timestamp(match_id, after_seq, limit=limit + 1)
         if not events:
             all_events = await self._store.get_events_by_game_id(match_id)
@@ -78,6 +100,7 @@ class ObserverService:
         )
 
     def _build_match_dto(self, match_id: str, events: Iterable[EventBase]) -> MatchDTO:
+        """从事件序列中提取当前对局概览信息。"""
         events = list(events)
         last_event = events[-1]
         payloads = [event.payload for event in events if isinstance(event.payload, dict)]
@@ -104,6 +127,7 @@ class ObserverService:
         )
 
     def _build_players(self, events: Iterable[EventBase]) -> List[PlayerDTO]:
+        """从事件序列中构建玩家列表视图。"""
         event_list = list(events)
         player_order = self._find_player_order(event_list)
         alive_players = set(self._find_last_alive_players(event_list))
@@ -125,6 +149,7 @@ class ObserverService:
         return players
 
     def _find_player_order(self, events: Iterable[EventBase]) -> List[str]:
+        """从 game_started 事件读取座位顺序（玩家列表）。"""
         for event in events:
             if self._is_system(event, "game_started"):
                 players = event.payload.get("players", [])
@@ -133,6 +158,7 @@ class ObserverService:
         return []
 
     def _find_last_alive_players(self, events: Iterable[EventBase]) -> List[str]:
+        """根据淘汰事件（player_eliminated）推导最终存活玩家列表。"""
         player_order = self._find_player_order(events)
         alive = list(player_order)
         for event in events:
@@ -143,6 +169,7 @@ class ObserverService:
         return alive
 
     def _find_vote_targets(self, events: Iterable[EventBase]) -> Dict[str, str]:
+        """提取当前白天阶段的投票指向（仅保留最近一轮白天）。"""
         vote_targets: Dict[str, str] = {}
         for event in events:
             if self._is_system(event, "vote_recorded"):
@@ -157,6 +184,7 @@ class ObserverService:
         return vote_targets
 
     def _find_focus_target(self, events: Iterable[EventBase]) -> Optional[str]:
+        """找到最近的“焦点目标”（最近投票目标或最近被淘汰玩家）。"""
         for event in reversed(list(events)):
             if self._is_system(event, "vote_recorded"):
                 target = event.payload.get("target")
@@ -169,6 +197,7 @@ class ObserverService:
         return None
 
     def _find_winner(self, events: Iterable[EventBase]) -> Optional[str]:
+        """从 game_ended 事件中读取胜者阵营。"""
         for event in reversed(list(events)):
             if self._is_system(event, "game_ended"):
                 winner = event.payload.get("winner")
@@ -177,6 +206,7 @@ class ObserverService:
         return None
 
     def _find_last_payload_value(self, events: Iterable[EventBase], key: str) -> Optional[str]:
+        """在事件序列中从后往前查找 payload[key] 的最后一个非空值。"""
         for event in reversed(list(events)):
             value = event.payload.get(key) if isinstance(event.payload, dict) else None
             if value not in (None, ""):
@@ -184,9 +214,11 @@ class ObserverService:
         return None
 
     def _is_system(self, event: EventBase, system_name: str) -> bool:
+        """判断事件是否为指定 system_name 的系统事件。"""
         return event.event_type == "system" and event.payload is not None and getattr(event, "system_name", None) == system_name
 
     def _to_event_dto(self, event: EventBase) -> EventDTO:
+        """将内部事件模型转换为对外 DTO。"""
         data: Dict[str, Any] = event.model_dump()
         return EventDTO(
             event_id=str(data["event_id"]),

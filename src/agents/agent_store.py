@@ -12,6 +12,11 @@ class AgentStore(EventStore):
     """按 Agent 独立保存局内可见 Observation。"""
 
     def __init__(self, root_dir: str | Path, agent_id: str, game_id: str) -> None:
+        """创建指定 Agent + 对局的观察事件存储。
+
+        Observation 会落盘到：
+        `<root_dir>/<agent_id>/<game_id>_observations.json`。
+        """
         self.agent_id = agent_id
         self.game_id = game_id
         file_path = Path(root_dir) / agent_id / f"{game_id}_observations.json"

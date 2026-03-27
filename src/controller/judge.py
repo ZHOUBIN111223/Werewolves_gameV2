@@ -1,18 +1,35 @@
+"""游戏规则裁判（Judge）。
+
+Judge 负责：
+- 维护每局游戏的核心状态（GameState）
+- 校验行动是否合法（validate_action）
+- 根据行动推进状态并产出系统事件（process_action / advance_phase）
+
+Controller 只负责流程编排与事件分发；规则判断与状态变更统一收敛在 Judge 中。
+"""
+
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Dict, List, Optional
+from typing import Any, Dict, List, Optional, Set
 
 from src.enums import ActionType, GamePhase
 from src.events.action import Action
 from src.events.event import EventBase
 from src.events.system_event import SystemEvent
 
+# 神职集合：用于胜负判断、对局摘要等逻辑中的“特殊角色”识别。
 GOD_ROLES = {"seer", "witch", "hunter", "guard"}
 
 
 @dataclass
 class GameState:
+    """单局游戏的可变状态快照。
+
+    说明：该对象由 Judge 初始化并在对局过程中不断被更新；Controller 与 Agent 侧
+    通常只通过事件系统获取对局进展，不应直接修改此结构。
+    """
+
     game_id: str
     current_phase: GamePhase
     players: Dict[str, str]
@@ -46,18 +63,26 @@ class GameState:
     pending_badge_transfer_from: Optional[str] = None
     pending_badge_transfer_to: Optional[str] = None
     pending_badge_destroy_notice: bool = False
+    rule_adherence_records: List[Dict[str, Any]] = field(default_factory=list)
+    rule_adherence_all_records: List[Dict[str, Any]] = field(default_factory=list)
+    rule_adherence_record_keys: Set[str] = field(default_factory=set)
 
 
 class Judge:
+    """规则裁判：负责状态推进与行动合法性校验。"""
+
     FINAL_PHASES = {GamePhase.POST_GAME}
 
     def __init__(self) -> None:
+        """创建 Judge，并初始化对局状态表。"""
         self._game_states: Dict[str, GameState] = {}
 
     def get_state(self, game_id: str) -> Optional[GameState]:
+        """获取指定对局的当前状态；不存在则返回 None。"""
         return self._game_states.get(game_id)
 
     def initialize_game(self, game_id: str, players: Dict[str, str]) -> GameState:
+        """初始化一局新游戏并返回初始状态。"""
         seat_order = list(players.keys())
         state = GameState(
             game_id=game_id,
@@ -81,12 +106,15 @@ class Judge:
         return state
 
     def _is_day_phase(self, phase: GamePhase) -> bool:
+        """判断是否为白天阶段。"""
         return phase.value.startswith("day_")
 
     def _is_night_phase(self, phase: GamePhase) -> bool:
+        """判断是否为夜晚阶段。"""
         return phase.value.startswith("night_")
 
     def _prepare_day_state(self, state: GameState) -> None:
+        """进入白天前重置/准备与白天流程相关的状态字段。"""
         state.speaking_order = [player_id for player_id in state.seat_order if player_id in state.alive_players]
         state.current_subphase = "daybreak"
         state.sheriff_candidates = []
@@ -95,6 +123,7 @@ class Judge:
         state.pending_vote_last_words = []
 
     def _prepare_night_state(self, state: GameState) -> None:
+        """进入夜晚前重置/准备与夜晚技能相关的状态字段。"""
         state.protected_players = {}
         state.kills_pending = []
         state.poisonings_pending = []
@@ -105,6 +134,7 @@ class Judge:
         state.current_subphase = "guard"
 
     def _get_next_phase(self, current_phase: GamePhase) -> GamePhase:
+        """根据当前阶段计算下一个阶段。"""
         if current_phase == GamePhase.SETUP:
             return GamePhase.NIGHT_1
         phase_name, round_no_str = current_phase.value.split("_")
@@ -117,6 +147,7 @@ class Judge:
             return GamePhase.POST_GAME
 
     def _choose_badge_successor(self, state: GameState, departed_player: str) -> Optional[str]:
+        """为警徽选择默认继承人（按座位顺序向后找到第一个存活者）。"""
         if departed_player not in state.seat_order:
             return next(iter(state.alive_players), None)
         departed_index = state.seat_order.index(departed_player)
@@ -133,6 +164,7 @@ class Judge:
         visibility: List[str],
         events: List[EventBase],
     ) -> None:
+        """处理警徽持有者离场：进入“待转移/可销毁”状态，由 Controller 决定后续动作。"""
         if state.badge_holder_id != departed_player:
             return
         state.sheriff_id = None
@@ -157,6 +189,7 @@ class Judge:
         from_player: str,
         target_player: Optional[str],
     ) -> List[EventBase]:
+        """落地警徽转移结果（转移给存活玩家或直接销毁）。"""
         state.pending_badge_transfer_from = None
         state.pending_badge_transfer_to = None
         state.pending_badge_destroy_notice = False
@@ -193,6 +226,11 @@ class Judge:
         ]
 
     def validate_action(self, action: Action, state: GameState) -> tuple[bool, str]:
+        """校验某个行动在当前状态下是否合法。
+
+        Returns:
+            (is_valid, reason): is_valid 为 False 时，reason 为不可行动原因。
+        """
         if action.actor not in state.players:
             return False, "player does not exist"
         if action.actor not in state.alive_players and state.current_subphase != "last_words":
@@ -231,6 +269,12 @@ class Judge:
         return action.action_type == ActionType.SKIP, f"{role} can only skip at night"
 
     def process_action(self, action: Action, state: GameState) -> List[EventBase]:
+        """处理一个已提交的 Action，并产出对应的系统事件列表。
+
+        说明：
+        - 该函数会先调用 validate_action；若非法则返回 action_validation_failed 事件。
+        - 若合法则更新 GameState，并返回可被 Controller 发布到 EventBus 的事件序列。
+        """
         is_valid, error_msg = self.validate_action(action, state)
         if not is_valid:
             return [
@@ -363,6 +407,7 @@ class Judge:
         ]
 
     def count_votes(self, state: GameState) -> Dict[str, int]:
+        """统计当前白天投票票型（目标 -> 票数）。"""
         votes = state.phase_votes.get(state.current_phase.value, {})
         counts = {player_id: 0 for player_id in state.alive_players}
         for target in votes.values():
@@ -371,6 +416,7 @@ class Judge:
         return counts
 
     def count_sheriff_votes(self, state: GameState) -> Dict[str, int]:
+        """统计警长竞选投票票型（候选人 -> 票数）。"""
         counts = {player_id: 0 for player_id in state.sheriff_candidates}
         for target in state.sheriff_votes.values():
             if target in counts:
@@ -378,6 +424,14 @@ class Judge:
         return counts
 
     def eliminate_player(self, state: GameState, player_to_eliminate: str, *, reason: str = "eliminated", visibility: Optional[List[str]] = None) -> List[EventBase]:
+        """淘汰指定玩家并产出对应事件。
+
+        Args:
+            state: 当前对局状态
+            player_to_eliminate: 要淘汰的玩家 ID
+            reason: 淘汰原因（用于事件 payload）
+            visibility: 事件可见范围；默认 ["all"]
+        """
         events: List[EventBase] = []
         event_visibility = visibility or ["all"]
         if player_to_eliminate not in state.alive_players:
@@ -405,6 +459,7 @@ class Judge:
         return events
 
     def resolve_sheriff_election(self, state: GameState) -> List[EventBase]:
+        """结算警长竞选投票，并确定警长/警徽持有者。"""
         vote_counts = self.count_sheriff_votes(state)
         events: List[EventBase] = [
             SystemEvent(
@@ -464,6 +519,13 @@ class Judge:
         return events
 
     def check_victory_conditions(self, state: GameState) -> tuple[Optional[str], bool]:
+        """检查胜负条件是否达成。
+
+        Returns:
+            (winner, ended)
+            - winner: "villagers" / "werewolves" / None
+            - ended: 是否满足结束条件
+        """
         werewolves_alive = [player_id for player_id in state.alive_players if state.players[player_id] == "werewolf"]
         villagers_alive = [player_id for player_id in state.alive_players if state.players[player_id] == "villager"]
         gods_alive = [player_id for player_id in state.alive_players if state.players[player_id] in GOD_ROLES]
@@ -474,6 +536,7 @@ class Judge:
         return None, False
 
     def _resolve_post_game_outcome(self, state: GameState) -> tuple[str, str]:
+        """在进入 POST_GAME 时最终确定胜者与结算原因。"""
         winner, game_ended = self.check_victory_conditions(state)
         if game_ended and winner:
             return winner, "standard_victory"
@@ -483,6 +546,7 @@ class Judge:
         return "villagers", "post_game_fallback_villagers"
 
     def _finalize_post_game(self, state: GameState, events: List[EventBase], previous_phase: GamePhase) -> List[EventBase]:
+        """强制进入结算阶段：写入 game_ended 等系统事件，并锁定对局状态。"""
         winner, resolution_reason = self._resolve_post_game_outcome(state)
         state.current_phase = GamePhase.POST_GAME
         state.current_subphase = "post_game"
@@ -509,6 +573,7 @@ class Judge:
         return events
 
     def advance_phase(self, game_id: str) -> List[EventBase]:
+        """推进对局阶段并产出该阶段结算/推进相关的系统事件序列。"""
         state = self._game_states[game_id]
         current_phase = state.current_phase
         events: List[EventBase] = [
@@ -614,10 +679,12 @@ class Judge:
         return events
 
     def get_alive_players(self, game_id: str) -> List[str]:
+        """返回当前对局存活玩家列表（副本）。"""
         state = self._game_states.get(game_id)
         return state.alive_players[:] if state else []
 
     def get_game_status(self, game_id: str) -> Dict:
+        """返回对局状态摘要（便于外部查询/展示）。"""
         state = self._game_states.get(game_id)
         if not state:
             return {}

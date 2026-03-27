@@ -65,6 +65,7 @@ class AgentMemoryStore:
     """按 Agent 独立保存 JSON 私有记忆。"""
 
     def __init__(self, root_dir: str | Path, agent_id: str) -> None:
+        """创建并初始化指定 Agent 的私有记忆文件。"""
         self.agent_id = agent_id
         self.file_path = Path(root_dir) / agent_id / "memory.json"
         self.file_path.parent.mkdir(parents=True, exist_ok=True)
@@ -109,9 +110,11 @@ class AgentMemoryStore:
             item for item in self.read_all()
             if item.memory_type == "speech" and item.game_id == game_id and item.phase == phase
         ]
-        # 按时间顺序返回最新的发言
-        items.sort(key=lambda x: x.item_id, reverse=True)
-        return items[:limit]
+        if limit <= 0:
+            return []
+        # MemoryItem.item_id is a random uuid4 and does not preserve insertion time.
+        # Keep the append order in memory.json and return the most recent `limit` items.
+        return items[-limit:]
 
     def retrieve_strategy_rules(self, role: str, limit: int = 3) -> list[MemoryItem]:
         """Retrieve reusable strategy rules for the given role."""

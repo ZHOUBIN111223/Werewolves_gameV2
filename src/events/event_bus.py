@@ -37,6 +37,11 @@ class EventBus:
     """
 
     def __init__(self, global_store: GlobalEventStore) -> None:
+        """创建事件总线实例。
+
+        Args:
+            global_store: 全局事件落盘存储；publish 时会先写入该存储以保证可追溯性。
+        """
         # 全局事件账本，publish 时先写入持久化
         self._global_store = global_store
         # 订阅者注册表：subscriber_id -> _Subscription

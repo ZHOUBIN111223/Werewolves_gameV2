@@ -1,3 +1,9 @@
+"""导出可读的狼人杀对局记录。
+
+该脚本读取 SQLite 事件库（`store_data/global_events*.db`），将指定 game_id 的事件
+整理成适合人类阅读的文本，方便快速回放与排查对局流程。
+"""
+
 from __future__ import annotations
 
 import argparse
@@ -7,6 +13,7 @@ from pathlib import Path
 from typing import Any
 
 
+# 角色英文标识 -> 中文展示名
 ROLE_LABELS = {
     "villager": "村民",
     "werewolf": "狼人",
@@ -16,18 +23,21 @@ ROLE_LABELS = {
     "hunter": "猎人",
 }
 
+# 复盘结果标签 -> 中文展示名
 OUTCOME_LABELS = {
     "win": "胜利",
     "lose": "失败",
     "unknown": "未知",
 }
 
+# 胜者阵营 -> 中文展示名
 WINNER_LABELS = {
     "werewolves": "狼人阵营",
     "villagers": "好人阵营",
     "unknown": "未知",
 }
 
+# 某些 phase 名称在展示时需要更友好的标题
 PHASE_NAME_OVERRIDES = {
     "setup": "准备阶段",
     "post_game": "结算阶段",
@@ -35,6 +45,12 @@ PHASE_NAME_OVERRIDES = {
 
 
 def player_sort_key(player_id: str) -> tuple[int, str]:
+    """玩家 ID 的排序键。
+
+    规则：
+    - `player_数字` 按数字从小到大排序
+    - 其他 ID 放到末尾，保持字典序
+    """
     if player_id.startswith("player_"):
         suffix = player_id.split("_", 1)[1]
         if suffix.isdigit():
@@ -43,6 +59,7 @@ def player_sort_key(player_id: str) -> tuple[int, str]:
 
 
 def phase_sort_key(phase: str) -> tuple[int, int]:
+    """phase 的排序键，用于按对局流程输出。"""
     if phase == "setup":
         return (0, 0)
     if phase == "post_game":
@@ -57,6 +74,7 @@ def phase_sort_key(phase: str) -> tuple[int, int]:
 
 
 def phase_title(phase: str) -> str:
+    """将内部 phase 名称转换为更易读的标题。"""
     if phase in PHASE_NAME_OVERRIDES:
         return PHASE_NAME_OVERRIDES[phase]
     if phase.startswith("night_"):
@@ -67,11 +85,13 @@ def phase_title(phase: str) -> str:
 
 
 def format_vote_counts(vote_counts: dict[str, int]) -> str:
+    """将投票统计字典格式化为一行文本。"""
     items = sorted(vote_counts.items(), key=lambda item: player_sort_key(item[0]))
     return "，".join(f"{player}: {votes}票" for player, votes in items)
 
 
 def fetch_events(db_path: Path, game_id: str) -> list[dict[str, Any]]:
+    """从 SQLite 事件库中读取指定对局的原始事件记录。"""
     conn = sqlite3.connect(db_path)
     try:
         conn.row_factory = sqlite3.Row
@@ -104,6 +124,11 @@ def fetch_events(db_path: Path, game_id: str) -> list[dict[str, Any]]:
 
 
 def choose_game_id(db_path: Path, requested_game_id: str | None) -> str:
+    """选择要导出的 game_id。
+
+    - 若显式传入 requested_game_id，则校验其存在
+    - 否则默认导出数据库中最新的一局（按 timestamp/sequence/id 排序）
+    """
     conn = sqlite3.connect(db_path)
     try:
         if requested_game_id:
@@ -133,6 +158,7 @@ def choose_game_id(db_path: Path, requested_game_id: str | None) -> str:
 
 
 def extract_roles_and_outcomes(events: list[dict[str, Any]]) -> dict[str, dict[str, str]]:
+    """从复盘事件中提取每个玩家的身份与胜负（复盘视角）。"""
     result: dict[str, dict[str, str]] = {}
     for event in events:
         if event["system_name"] != "reflection_recorded":
@@ -149,6 +175,7 @@ def extract_roles_and_outcomes(events: list[dict[str, Any]]) -> dict[str, dict[s
 
 
 def extract_summary(events: list[dict[str, Any]]) -> dict[str, Any]:
+    """提取对局摘要：玩家列表、胜者与最终存活。"""
     players: list[str] = []
     winner = "unknown"
     final_alive_players: list[str] = []
@@ -170,6 +197,7 @@ def extract_summary(events: list[dict[str, Any]]) -> dict[str, Any]:
 
 
 def render_event(event: dict[str, Any]) -> str | None:
+    """将单条事件渲染为可读文本（仅处理关心的 system 事件）。"""
     system_name = event["system_name"]
     payload = event["payload"]
 
@@ -241,6 +269,7 @@ def render_event(event: dict[str, Any]) -> str | None:
 
 
 def render_record(db_path: Path, game_id: str) -> str:
+    """渲染整个对局为文本记录。"""
     events = fetch_events(db_path, game_id)
     summary = extract_summary(events)
     roles_and_outcomes = extract_roles_and_outcomes(events)
@@ -292,6 +321,7 @@ def render_record(db_path: Path, game_id: str) -> str:
 
 
 def main() -> None:
+    """CLI 入口：解析参数并写出导出文件。"""
     parser = argparse.ArgumentParser(description="导出狼人杀对局的可读文本记录")
     parser.add_argument(
         "--db",

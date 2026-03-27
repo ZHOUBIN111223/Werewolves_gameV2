@@ -25,6 +25,7 @@ class AsyncEventStore:
     """异步事件存储器，基于SQLite数据库实现高性能存储和查询。"""
 
     def __init__(self, db_path: str | Path) -> None:
+        """创建异步事件存储，并记录数据库路径。"""
         self.db_path = Path(db_path)
         self.db_path.parent.mkdir(parents=True, exist_ok=True)
         self._initialized = False
