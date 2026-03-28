@@ -1,88 +1,87 @@
-# Werewolves Game V2
+# Werewolf Web Workspace
 
-一个基于多智能体和大模型的狼人杀模拟项目，包含命令行对局入口和只读观战 API。
+一个整理后的单仓工作区，包含狼人杀模拟后端和 3D 观战前端。
 
-## 功能
+## 目录
 
-- 支持 6 / 9 / 12 人配置
-- 支持 `openai`、`anthropic`、`bailian`、`custom`、`mock` 五种模型提供方
-- 支持事件流、记忆存储、赛后复盘
-- 提供 FastAPI 观战接口
+```text
+Werewolf_web/
+├─ backend/          # 多智能体狼人杀后端与观战 API
+├─ frontend/         # React + Three.js 3D 观战前端
+├─ scripts/          # 一键启动 / 停止脚本
+├─ start-stack.cmd
+├─ stop-stack.cmd
+├─ .gitignore
+└─ README.md
+```
 
-## 环境要求
+运行生成物和本地依赖不再作为源码提交，包括：
 
-- Python 3.11+
-- 已安装 `requirements.txt` 中依赖
+- `.runtime`
+- `frontend/node_modules`
+- `frontend/dist`
+- `backend/store_data`
+- `backend/logs`
+- `backend/results`
 
-## 安装
+## 快速启动
 
-```bash
+一键启动：
+
+```powershell
+.\start-stack.cmd
+```
+
+一键停止：
+
+```powershell
+.\stop-stack.cmd
+```
+
+默认行为：
+
+- 启动后端观战 API：`http://127.0.0.1:8000`
+- 启动前端开发服务：`http://127.0.0.1:5173` 到 `5177` 中的空闲端口
+- 如果本机环境中存在 `BAILIAN_API_KEY`，会默认自动拉起一局新的 Bailian 对局
+- 如果没有 `BAILIAN_API_KEY`，脚本只启动前后端，不会强行开真局
+
+手动要求启动真局：
+
+```powershell
+$env:BAILIAN_API_KEY="your_key"
+.\start-stack.cmd -RunLiveGame
+```
+
+## 手动开发
+
+前端：
+
+```powershell
+cd frontend
+npm install
+npm run dev
+```
+
+后端：
+
+```powershell
+cd backend
 pip install -r requirements.txt
-```
-
-## 运行
-
-本地测试模式：
-
-```bash
-python main.py --test-mode --games 1 --game-config 6_players
-```
-
-使用真实模型：
-
-```bash
-python main.py --api-provider openai --model gpt-4o-mini --games 1 --game-config 6_players
-```
-
-常用环境变量：
-
-- `OPENAI_API_KEY`
-- `OPENAI_BASE_URL`
-- `OPENAI_DEFAULT_MODEL`
-- `ANTHROPIC_API_KEY`
-- `ANTHROPIC_BASE_URL`
-- `ANTHROPIC_DEFAULT_MODEL`
-- `BAILIAN_API_KEY`
-- `BAILIAN_ENDPOINT`
-- `BAILIAN_DEFAULT_MODEL`
-- `CUSTOM_BASE_URL`
-- `LITELLM_API_KEY`
-- `STORE_PATH`
-- `LOG_PATH`
-
-## 观战 API
-
-```bash
 uvicorn src.api.main:app --reload
 ```
 
-默认健康检查：
+## 关键入口
 
-```text
-GET /health
-```
+- [App.jsx](C:/Users/周彬/Desktop/Werewolf_web/frontend/src/App.jsx)
+- [WerewolfScene.jsx](C:/Users/周彬/Desktop/Werewolf_web/frontend/src/components/WerewolfScene.jsx)
+- [useWerewolfObserver.js](C:/Users/周彬/Desktop/Werewolf_web/frontend/src/hooks/useWerewolfObserver.js)
+- [main.py](C:/Users/周彬/Desktop/Werewolf_web/backend/src/api/main.py)
+- [frontend_observer_api.md](C:/Users/周彬/Desktop/Werewolf_web/backend/docs/frontend_observer_api.md)
 
-## 导出可读对局记录
+## Git 提交策略
 
-先运行一局游戏，再执行：
+这个工作区适合作为 `ZHOUBIN111223/Werewolves_gameV2` 的下一版分支提交：
 
-```bash
-python tools/export_readable_game_record.py --db store_data/global_events_test.db --output examples/sample_game_record.txt
-```
-
-默认会导出数据库里的最新一局，并生成 UTF-8 编码的纯文本记录，适合直接提交到仓库中查看。
-
-## 项目结构
-
-```text
-.
-├── main.py
-├── config.py
-├── requirements.txt
-├── tools/
-├── examples/
-├── docker/
-└── src/
-```
-
-运行生成的日志、结果和本地存储目录已加入 `.gitignore`，不会再被提交。
+- 保留旧版本历史
+- 不直接覆盖原始 `main`
+- 通过新分支承载 `frontend + backend` 的整合版本

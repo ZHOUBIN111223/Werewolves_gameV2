@@ -1,8 +1,0 @@
-```json
-{
-  "action_type": "vote",
-  "target": "player_1",
-  "reasoning_summary": "作为狼人，我投票给声称预言家的player_1，一方面可以伪装成相信其查杀player_0的说法，另一方面如果player_1是真预言家，拿到警徽后可以继续为好人提供信息，我需要隐藏身份混入好人阵营。",
-  "public_speech": ""
-}
-```

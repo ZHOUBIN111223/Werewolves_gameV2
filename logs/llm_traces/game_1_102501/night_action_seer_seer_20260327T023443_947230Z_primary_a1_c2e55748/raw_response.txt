@@ -1,8 +1,0 @@
-```json
-{
-  "action_type": "inspect",
-  "target": "player_1",
-  "reasoning_summary": "我是预言家，首夜验player_3是猎人已确认好人。player_2报银水救了我，基本坐实女巫身份。目前存活的未知身份玩家只有player_1和player_5，我在白天发言中提到会验player_1或player_4，player_4已出局，验player_1符合我之前的验人逻辑，也能帮好人阵营锁定最后的狼坑位置。",
-  "public_speech": ""
-}
-```

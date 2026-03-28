@@ -1,8 +1,0 @@
-```json
-{
-  "action_type": "speak",
-  "target": "",
-  "reasoning_summary": "作为村民，我需要分析场上信息。player_3的女巫身份与平安夜吻合，可信度较高。player_1首夜验player_0的逻辑确实存疑，player_2和player_5快速站边player_1值得注意。player_0被查杀后投给player_3而非player_1的行为也有点奇怪。我想先听player_5发言再判断。",
-  "public_speech": "我来说说我的看法。警长投票时我投给了player_3，因为她的女巫身份和昨晚平安夜完全吻合，可信度很高。player_1首夜验player_0的逻辑确实需要解释——没有任何发言基础的情况下，为什么偏偏选player_0？player_2和player_5在警长投票时快速站边player_1，这点我也有点在意。不过player_0被查杀后没有投给player_1而是投给player_3，这个行为也值得思考。我希望能先听到player_5的发言，解释一下为什么这么快相信player_1，再做判断。"
-}
-```

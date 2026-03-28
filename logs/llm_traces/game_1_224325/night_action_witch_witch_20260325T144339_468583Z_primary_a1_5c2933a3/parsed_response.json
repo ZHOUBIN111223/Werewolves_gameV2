@@ -1,6 +1,0 @@
-{
-  "action_type": "heal",
-  "target": "player_3",
-  "reasoning_summary": "首夜player_3被狼人袭击，根据策略应优先解救首夜受害者。目前没有任何信息怀疑player_3的身份，且解药在首夜使用收益较高，可以保护一个好人玩家并为自己后续判断提供信息基础。",
-  "public_speech": ""
-}

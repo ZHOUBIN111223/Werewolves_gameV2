@@ -1,8 +1,0 @@
-```json
-{
-  "action_type": "speak",
-  "target": "",
-  "reasoning_summary": "player_2歪曲了投票事实，player_5两轮都投player_1没有反水，而player_2自己从警长票投player_1变成日票投player_0，这才是真正的转变。我需要澄清事实并指出player_2的可疑之处。",
-  "public_speech": "player_2你的说法有问题。首先，player_5警长票和日票都投给player_1，根本没有反水，你歪曲事实是在干什么？其次，你自己警长票投player_1，日票却转投player_0，这才是真正的转变。当时player_1查杀player_0是狼，你却投了被查杀的人，现在又来指责我？我承认我日票投死预言家是判断失误，但你的票型和歪曲事实的行为更可疑。"
-}
-```

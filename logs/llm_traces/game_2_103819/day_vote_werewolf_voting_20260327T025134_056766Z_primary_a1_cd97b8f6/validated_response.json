@@ -1,6 +1,0 @@
-{
-  "action_type": "vote",
-  "target": "player_4",
-  "reasoning_summary": "作为狼人，我需要投票给一个村民。player_4的投票记录更有利于我攻击——他日票投死预言家player_1，这个行为更容易被质疑。player_5的投票一直一致，攻击难度更大。我投player_4，尝试说服player_5跟我一起出player_4。",
-  "public_speech": ""
-}

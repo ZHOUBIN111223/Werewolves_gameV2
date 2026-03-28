@@ -1,6 +1,0 @@
-{
-  "action_type": "vote",
-  "target": "player_2",
-  "reasoning_summary": "作为警长，我已公开表态认为player_4是狼悍跳、player_0是好人，剩余狼人在player_2和player_5之间。player_2在警长投票时站边player_4（投给player_4），这个行为比player_5更可疑。player_5警长票投给player_1，与player_4没有直接关联。为了保持发言一致性，我投player_2。",
-  "public_speech": ""
-}

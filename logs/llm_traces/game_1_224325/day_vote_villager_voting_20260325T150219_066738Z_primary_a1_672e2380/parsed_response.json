@@ -1,6 +1,0 @@
-{
-  "action_type": "vote",
-  "target": "player_0",
-  "reasoning_summary": "player_0突然把票投给我，这个时机很可疑。player_3作为警长分析认为player_4是狼悍跳，但player_0的反常投票让我重新审视——如果player_4真是预言家，player_0就是狼，现在急于找替罪羊。我选择跟随这个逻辑投票player_0。",
-  "public_speech": ""
-}

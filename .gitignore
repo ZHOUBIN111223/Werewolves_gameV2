@@ -1,19 +1,28 @@
-__pycache__/
-*.py[cod]
+.codex/
+.runtime/
 
-.claude/
-.env
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/logs/
+my-react-app/
+
+# Backend runtime data
+backend/__pycache__/
+backend/logs/
+backend/outputs/
+backend/results/
+backend/store_data/
+backend/reports/
+backend/data/
+
+# Python
+*.py[cod]
 .venv/
 venv/
 
-log/
-logs/
-outputs/
-results/
-reports/
-store_data/
-data/
-
-*.db
-*.log
-C*known_hosts
+# Editors / OS
+.DS_Store
+.idea/
+.vscode/
+Thumbs.db

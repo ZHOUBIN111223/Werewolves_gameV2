@@ -1,6 +1,0 @@
-{
-  "action_type": "vote",
-  "target": "player_0",
-  "reasoning_summary": "作为狼人，当前player_3带票投player_2，如果我跟票投player_2会暴露自己是狼。投player_0可以制造平票或转移矛盾，同时player_3已经分析认为player_0是好人，我投player_0可以表现出'独立思考'的好人姿态，避免被player_3怀疑。",
-  "public_speech": ""
-}
