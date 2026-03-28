@@ -1,8 +1,0 @@
-```json
-{
-  "action_type": "speak",
-  "target": "",
-  "reasoning_summary": "作为狼人，我需要继续伪装成好人。player_4被全票出局后坚持说player_0是狼，但我倾向于认为player_4是狼悍跳失败。player_1被刀后警徽传给player_3，我需要表态但保持灵活性，等待player_3的归票方向。",
-  "public_speech": "player_1昨晚被刀确实让人意外。回顾昨天，player_4起跳预言家查杀player_0，但他的验人选择和打法确实偏激进，最终被全票出局。我倾向于认为player_4是狼悍跳失败，player_0应该是好人。但player_1作为警长质疑player_4后被刀，这个时间点确实值得思考。player_3现在拿着警徽，我想听听你的判断，今天准备怎么带队。"
-}
-```

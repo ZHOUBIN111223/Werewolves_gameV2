@@ -1,8 +1,0 @@
-```json
-{
-  "action_type": "vote",
-  "target": "player_4",
-  "reasoning_summary": "我是预言家，已确认player_3是猎人，player_2是银水女巫。在银水信息出来后，player_1已经转向站边我，但player_4仍然对我持保留态度，这种立场值得警惕。我在发言中已经公开表示更关注player_4，投票应与公开立场一致。",
-  "public_speech": ""
-}
-```

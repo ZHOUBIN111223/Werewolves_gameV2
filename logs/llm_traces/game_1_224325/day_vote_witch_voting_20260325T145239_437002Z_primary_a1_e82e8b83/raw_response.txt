@@ -1,8 +1,0 @@
-```json
-{
-  "action_type": "vote",
-  "target": "player_4",
-  "reasoning_summary": "我是女巫，首夜救了player_3（狼刀目标）。player_4起跳预言家查杀player_0，但player_0被查杀后发言冷静、逻辑清晰，不像狼人被曝光的反应。player_4首夜随机验人拿到查杀后立刻亮身份抢警长，打法激进，且只有player_2一人支持他当警长。目前场上只有player_4一人跳预言家，真假未定，我作为警长已表态不建议贸然票出player_0。投票给player_4与我公开立场一致，也符合谨慎判断真假预言家的思路。",
-  "public_speech": ""
-}
-```

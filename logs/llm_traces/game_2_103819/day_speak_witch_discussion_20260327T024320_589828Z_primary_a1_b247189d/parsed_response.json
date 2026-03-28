@@ -1,6 +1,0 @@
-{
-  "action_type": "speak",
-  "target": "",
-  "reasoning_summary": "作为女巫，我需要分析player_1和player_0的发言。player_1查杀player_0，但第一晚验人选择确实值得质疑。player_0被查杀后投给我警徽票而非投给player_1，这个行为有些反常。player_2和player_5快速站边player_1需要观察。我需要听player_4和player_5的发言再做判断。",
-  "public_speech": "我先确认一下：我是女巫，昨晚自救，解药已用。player_2提出的问题很关键——第一晚没有任何信息基础，player_1选择验player_0的逻辑确实需要解释。不过player_0被查杀后没有投给player_1而是投给我，这个行为我也有点困惑。player_2和player_5在警长投票时快速站边player_1，我希望听到player_5的发言，解释一下为什么这么快相信player_1。"
-}

@@ -1,6 +1,0 @@
-{
-  "action_type": "vote",
-  "target": "player_1",
-  "reasoning_summary": "作为女巫，我分析了场上形势：player_1首夜验player_0的逻辑没有合理解释，且player_2和player_5在警长投票时快速站边player_1，形成可疑的投票block。player_2更是先站边player_1，现在又投票player_0，行为模式像狼队配合。如果player_1是真预言家，他应该能说服大家；但如果player_1是狼悍跳，这票型就是狼队在推player_0。我选择投player_1，让票型变成2比2，逼出更多信息。",
-  "public_speech": ""
-}

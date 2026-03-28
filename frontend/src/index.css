@@ -1,0 +1,89 @@
+@font-face {
+  font-family: 'Kenney Future';
+  src: url('/assets/kenney/ui-pack/Font/Kenney Future.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Kenney Future Narrow';
+  src: url('/assets/kenney/ui-pack/Font/Kenney Future Narrow.ttf') format('truetype');
+  font-display: swap;
+}
+
+:root {
+  --bg-night: #1a1210;
+  --bg-dawn: #4a2f23;
+  --panel: rgba(36, 27, 23, 0.9);
+  --line: rgba(255, 222, 172, 0.16);
+  --ink: #f4e8d3;
+  --ink-soft: #d4c2ae;
+  --muted: #a28a73;
+  --font-display: 'Kenney Future', 'Trebuchet MS', sans-serif;
+  --font-body: 'Kenney Future Narrow', 'Trebuchet MS', sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 50% -10%, rgba(255, 170, 82, 0.34), transparent 28%),
+    radial-gradient(circle at 14% 18%, rgba(95, 132, 198, 0.16), transparent 24%),
+    radial-gradient(circle at 82% 10%, rgba(255, 213, 142, 0.1), transparent 18%),
+    linear-gradient(180deg, #5b3829 0%, var(--bg-dawn) 18%, var(--bg-night) 58%, #0e0908 100%);
+  font-family: var(--font-body);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  width: 100%;
+  max-width: 100%;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  background-color: #130d0b;
+  color: var(--ink);
+}
+
+#root {
+  overflow-x: clip;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at center, rgba(255, 214, 153, 0.05), transparent 55%),
+    linear-gradient(transparent, rgba(0, 0, 0, 0.18));
+  mix-blend-mode: screen;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+img,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}

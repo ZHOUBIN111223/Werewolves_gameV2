@@ -1,6 +1,0 @@
-{
-  "action_type": "vote",
-  "target": "player_2",
-  "reasoning_summary": "player_3作为警长分析认为player_4是狼悍跳，剩余狼人在player_2和player_5之间，并质疑player_2先支持player_4后又改票的行为。我投player_2符合警长带队的逻辑，同时player_5一直帮我说话，投player_2更安全。",
-  "public_speech": ""
-}

@@ -1,8 +1,0 @@
-```json
-{
-  "action_type": "vote",
-  "target": "player_4",
-  "reasoning_summary": "作为狼人，player_4自称预言家查杀player_0。目前player_0、player_1、player_2、player_3都已投player_4，player_4出局已成定局。我跟随多数票投player_4可以保持与之前发言一致，建立好人身份，同时避免暴露与player_0的关系。",
-  "public_speech": ""
-}
-```

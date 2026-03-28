@@ -1,8 +1,0 @@
-```json
-{
-  "action_type": "speak",
-  "target": "",
-  "reasoning_summary": "作为警长需要带队，分析player_4是否为真预言家。从投票看5人投player_4无人保，更像是狼悍跳失败，player_0倾向好人。剩余狼在player_2和player_5之间，player_2警长票站边player_4后改票需解释。",
-  "public_speech": "player_1把警徽传给我，我来说明带队思路。昨天player_4起跳预言家查杀player_0，最终被5票投出局。关键问题是判断player_4身份。如果他是真预言家，那player_0是狼；但仔细想，5个人投他、没有人保他，这更像是狼悍跳失败被好人集体识破。player_0被查杀后发言冷静、逻辑清晰，不像狼被抓现行。我倾向认为player_4是狼悍跳，player_0是好人。那剩余狼人在player_2和player_5之间。player_2警长票站边player_4，后来改票投他，这个转变需要解释。请player_2说说你当时为什么先支持player_4，后来又改主意了。"
-}
-```

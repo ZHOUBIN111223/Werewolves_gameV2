@@ -1,8 +1,0 @@
-```json
-{
-  "action_type": "speak",
-  "target": "",
-  "reasoning_summary": "作为狼人，我需要在三人残局中生存。player_1是预言家被投出局，player_0是狼队友已死亡。我需要嫁祸给player_4或player_5。player_4的投票转变最可疑——警长票投player_3，日票却投死player_1，这个转向需要解释。我选择质疑player_4来为自己争取生存空间。",
-  "public_speech": "昨晚双死，player_1是预言家，player_0确实是狼人，player_3是女巫也走了。现在场上只剩我和player_4、player_5，说明还有一只狼。我重新盘了一下票型：警长投票时player_4投给player_3，但日票时却转投player_1，亲手把预言家投出局。player_5也是类似，警长票站player_1，日票却反水投死预言家。这两个人谁更可疑？我觉得player_4的转变更值得质疑，警长票时player_3自称女巫，他信了，但日票时却没站边查杀狼人的预言家，反而帮狼人把预言家投出局，这个逻辑我需要他解释一下。"
-}
-```

@@ -1,8 +1,0 @@
-```json
-{
-  "action_type": "speak",
-  "target": "",
-  "reasoning_summary": "我是狼人，player_4是真预言家查杀了我。现在player_4已死，player_1警长昨晚被刀。我需要继续伪装，质疑player_4身份，把水搅浑，争取存活。",
-  "public_speech": "昨天player_4被全票出局，他到死坚持说我是狼。但大家仔细想想——player_1昨天作为警长质疑player_4的打法激进，没有站边他，结果昨晚player_1就被刀了。如果player_4是真预言家，狼队刀警长削弱好人带队确实合理；但如果player_4是狼悍跳失败，狼队刀掉警长也能制造混乱、转移视线。player_3现在接了警徽，我想听听你怎么分析这个局面，也请player_5说说你的判断。"
-}
-```
